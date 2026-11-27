@@ -191,3 +191,7 @@ footer.site .heart{color:var(--sun2)}
 .fv-box .acts .btn{flex:1 1 auto}
 .fv-box .mission p{color:var(--ink2)}
 .fv-box .mission .hook{font-size:1.1rem;font-weight:800;color:var(--ink)}
+
+/* added 2026-11-27 */
+.login-note{margin:0 0 1em;padding:14px 16px;border-left:4px solid var(--accent);background:var(--surface);border-radius:0 12px 12px 0;color:var(--ink2)}
+.login-note p{margin:0}
