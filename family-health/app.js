@@ -122,6 +122,13 @@
     }
   }
 
+  /* keep progress and report current while someone answers, without redrawing the sliders */
+  function refresh() {
+    var m = $("#fh-matrix"), r = $("#fh-report");
+    if (m) m.parentNode.replaceChild(stepMatrix(), m);
+    if (r) r.parentNode.replaceChild(stepReport(), r);
+  }
+
   /* step 1: the family */
   function stepPeople() {
     var box = el("div", { "class": "step" }, [el("h3", { text: "1. Your family" }),
@@ -184,6 +191,7 @@
       var st = stats(r, s);
       prog.textContent = st.filled + " of " + st.total + " done" + (st.skip ? " (" + st.skip + " left out)" : "") + (st.filled === st.total ? ". Complete." : "");
       if (st.skip >= 3) note.removeAttribute("hidden"); else note.setAttribute("hidden", "");
+      refresh();
     }
     TRAITS.forEach(function (g) {
       box.appendChild(el("h4", { "class": "group-h", text: g[0] }));

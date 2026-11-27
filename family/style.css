@@ -43,7 +43,7 @@ footer{margin-top:48px;padding:28px 0 48px;background:var(--bg2);border-top:1px 
 .dash-top b{font-family:var(--head);font-size:1.3rem}
 .tile{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:4px 14px 10px}
 .tile.wide{grid-column:1/-1}
-.tile summary{cursor:pointer;font-weight:700;font-family:var(--head);font-size:1.1rem;padding:10px 0;min-height:44px;list-style-position:outside}
+.tile summary{cursor:pointer;font-weight:700;font-family:var(--head);font-size:1.1rem;padding:10px 0;min-height:44px;list-style-position:inside}
 .tile ul{padding-left:1.1em;margin:.2em 0}
 .tile li{margin:.25em 0}
 .missions{list-style:none;padding:0!important;display:grid;gap:6px}
