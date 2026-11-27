@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How we keep it secure | elevat.ing</title>
+<meta name="description" content="Our vision for security: hardware switches, a chain of locked boxes, and AI security agents that get stronger every month.">
+<link rel="canonical" href="https://elevat.ing/security/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%9B%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../css/elv8.css?v=1">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="elv8-cap" role="note">This website is owned by the person who owns this website. <a href="https://elevat.ing/">elevat.ing</a></div>
+<header class="page-hero">
+  <div class="wrap">
+    <a class="crumb" href="../">💛 elevat.ing</a>
+    <h1>How we keep it secure</h1>
+    <p class="lead">If one small team is going to hold humanity's best work, how will it be protected? Here is our vision of what the future of safety looks like.</p>
+  </div>
+</header>
+<main id="main" class="wrap sec">
+  <div class="prose">
+    <p class="status-note">This is our vision. Today every page is served over a secure connection, forms send only what you choose to type, and your data is never sold. The hardware below comes next.</p>
+
+    <h2>Software and hardware, together</h2>
+    <p>We think the future of safety includes all the progressive security features out there, plus a hardware security feature: a physical power switch that the owner has to turn by hand. It's not a button. When the handle is across, the circuit is open. When it's turned into place, the circuit is connected. Without that switch turned, information cannot leave the system, and nothing can get in.</p>
+
+    <h2>A chain of locked boxes</h2>
+    <p>Unlike the internet, which holds all the internet's information, we are making pristine boxes of humanity's best work. Picture a row of large storage boxes, each with its own manual switch. To reach the last box, every switch on the way has to be turned on, one box at a time. Every box is guarded by our own AI security agents.</p>
+    <div class="boxes" id="boxes" aria-label="Twelve storage boxes in a chain"></div>
+    <p class="small" id="boxcap" aria-live="polite">Twelve boxes. Each turn of a switch has a one-month lock.</p>
+    <p><button type="button" class="btn primary" id="boxplay">Play the simulation</button></p>
+
+    <h2>Why a month between boxes</h2>
+    <p>Each box has a physical lock that even we can't overturn: once a switch is turned, it can only be turned again after a set time. Say one month per box, and twelve boxes. So information moves from the top of the chain to the twelfth box over a year.</p>
+    <p>Here is why that matters. Say a bad actor gets past our first box. It has to sit there for a month. If it gets into box two, it sits there for another month. Meanwhile the other ten boxes are safe. And while it waits, we keep pushing out security updates, and our community keeps sharing what it learns about what bad actors can do.</p>
+    <p>So by the time the next switch turns, the intruder is months old and facing months-newer security agents. In our simulation, we have ten agents for every one of theirs, each one bigger and stronger. They catch the intruder, scan it from every side, note where it came from and what it was trying to do, clear every box it reached, and set up protections so it never gets in again. Then the ecosystem is pure and pristine once more.</p>
+    <p>Every update starts with security. Our security sentinels go in first and look for anything that got through. Only once they are satisfied do new updates get escorted, box by box, all the way to the last one.</p>
+
+    <h2>How many boxes, really?</h2>
+    <p>We've told you twelve. In a world where more boxes means more secure, how many do you think we really have? Theoretically, a system of a thousand boxes would mean a bad actor has to beat the defenses of the most advanced people a hundred years from now. To reach the last box, somebody would have to be so far ahead of everybody else that their virus could sit on our servers for years before anybody anywhere caught it.</p>
+    <p>We ballpark a monthly cadence of upgrades, but we won't announce when, because that would be another weakness.</p>
+
+    <h2>The one weakness left</h2>
+    <p>The remaining risks are physical access, or the person who owns the system becoming corrupt. That is why this whole system is engineered so that its creator's power shrinks quickly if they ever became corrupt. In order for this ecosystem to get built out, people are going to have to trust us. We hope you do, and we will stick to our word.</p>
+
+    <h2>Logging in</h2>
+    <p>When logins arrive, they will use multi-factor sign-in to protect you. We apologize if this security process is ever difficult for you. If it is, press the mic and tell us.</p>
+
+    <h2>Paying for it</h2>
+    <p>Nothing here will ever ask you for money. If donations do arrive, the very first thing they go to is this security infrastructure. You can see our <a href="https://claudebomb.com/donate/" target="_blank" rel="noopener">donations page</a>; giving there is not open yet.</p>
+
+    <div data-react="security-vision" data-label="The security vision" class="links"></div>
+    <p style="margin-top:1.4rem"><a class="btn" href="../#plans">Back to our plans</a></p>
+  </div>
+</main>
+<footer class="site"><div class="wrap"><p><b>💛 elevat.ing family of websites</b></p><p><a href="../">elevat.ing</a> · <a href="../end-suffering/">Ending world suffering</a> · <a href="../communities/">Communities</a></p><p class="small">Always free, forever. Ad-free, forever.</p></div></footer>
+<script>
+(function () {
+  var host = document.getElementById("boxes"), cap = document.getElementById("boxcap"), btn = document.getElementById("boxplay");
+  if (!host) return;
+  var B = [], i;
+  for (i = 0; i < 12; i++) { var b = document.createElement("div"); b.className = "box"; b.textContent = String(i + 1); host.appendChild(b); B.push(b); }
+  var steps = [
+    function () { B.forEach(function (b) { b.className = "box"; }); B[0].className = "box on"; return "The switch on box 1 turns. Data moves in."; },
+    function () { B[0].className = "box on bad"; return "A bad actor slips into box 1. It is stuck there for a month."; },
+    function () { B[1].className = "box on bad"; return "The next switch turns. It reaches box 2 and waits another month. Boxes 3 to 12 stay safe."; },
+    function () { B[0].className = "box on clean"; B[1].className = "box on clean"; return "A security update lands. Our newer, stronger agents catch it, scan it, and clear boxes 1 and 2."; },
+    function () { B.forEach(function (b) { b.className = "box on clean"; }); return "Only then are updates escorted, box by box, to the last box. Pure and pristine again."; }
+  ];
+  var k = 0, t = 0;
+  function run() { cap.textContent = steps[k](); k++; if (k < steps.length) t = setTimeout(run, 2600); else { btn.disabled = false; btn.textContent = "Play again"; } }
+  btn.addEventListener("click", function () { clearTimeout(t); k = 0; btn.disabled = true; run(); });
+})();
+</script>
+<script src="../js/elv8.js?v=1" defer></script>
+<script src="https://hmrfamily.life/js/hmr-dock.js?v=6.8.2" data-site="elevat.ing" defer></script>
+</body>
+</html>

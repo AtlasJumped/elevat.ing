@@ -1,0 +1,2660 @@
+{
+"updated": "2026-11-27",
+"note": "Every name in our system of elevating websites, with the plan for each. No prices: nothing here is for sale.",
+"sites": [
+{
+"h": "claudebomb.com",
+"c": "Our main sites",
+"m": "family",
+"p": "Flagship: the prompt bank for every AI model.",
+"s": 10.0,
+"u": "https://claudebomb.com/"
+},
+{
+"h": "grubbing.money",
+"c": "Fun and games",
+"m": "starter",
+"p": "An honest, funny look at money grabs, and how to spot them.",
+"s": 10.0,
+"u": "https://grubbing.money/"
+},
+{
+"h": "ilovedogs.dog",
+"c": "Dogs",
+"m": "starter",
+"p": "Everything for people who love dogs.",
+"s": 9.8,
+"u": "https://ilovedogs.dog/"
+},
+{
+"h": "ilovedogs.live",
+"c": "Dogs",
+"m": "starter",
+"p": "Live dog cams and happy dog moments.",
+"s": 9.8,
+"u": "https://ilovedogs.live/"
+},
+{
+"h": "ilovedogs.art",
+"c": "Dogs",
+"m": "starter",
+"p": "Dog art from people who love dogs. Share yours.",
+"s": 9.8,
+"u": "https://ilovedogs.art/"
+},
+{
+"h": "ilovedogs.tech",
+"c": "Dogs",
+"m": "starter",
+"p": "Tech for dog lovers: trackers, health logs, and smart tools.",
+"s": 9.8,
+"u": "https://ilovedogs.tech/"
+},
+{
+"h": "ilovedogs.cloud",
+"c": "Dogs",
+"m": "starter",
+"p": "A home for every photo of every good dog.",
+"s": 9.8,
+"u": "https://ilovedogs.cloud/"
+},
+{
+"h": "ilovedogs.space",
+"c": "Dogs",
+"m": "starter",
+"p": "A calm space for dog lovers to share and meet.",
+"s": 9.8,
+"u": "https://ilovedogs.space/"
+},
+{
+"h": "funsies.fun",
+"c": "Fun and games",
+"m": "family",
+"p": "Toys and games, made for joy.",
+"s": 9.0,
+"u": "https://funsies.fun/"
+},
+{
+"h": "underthebed.monster",
+"c": "Fun and games",
+"m": "starter",
+"p": "Bedtime stories where the monster under the bed is your friend.",
+"s": 9.0,
+"u": "https://underthebed.monster/"
+},
+{
+"h": "delulu.monster",
+"c": "Fun and games",
+"m": "starter",
+"p": "Dream big on purpose, then turn the dream into one small real step today.",
+"s": 9.0,
+"u": "https://delulu.monster/"
+},
+{
+"h": "discombobulat.ing",
+"c": "Fun and games",
+"m": "starter",
+"p": "Puzzles and illusions that scramble your brain, in a good way.",
+"s": 9.0,
+"u": "https://discombobulat.ing/"
+},
+{
+"h": "cosmicjoke.lol",
+"c": "Fun and games",
+"m": "starter",
+"p": "The funniest true facts about the universe.",
+"s": 9.0,
+"u": "https://cosmicjoke.lol/"
+},
+{
+"h": "overreact.ing",
+"c": "Fun and games",
+"m": "starter",
+"p": "Express your reaction, then laugh at it. Part of the Reaction App family.",
+"s": 9.0,
+"u": "https://overreact.ing/"
+},
+{
+"h": "dragonrid.ing",
+"c": "Fun and games",
+"m": "starter",
+"p": "An adventure game where you ride dragons across worlds.",
+"s": 8.5,
+"u": "https://dragonrid.ing/"
+},
+{
+"h": "eli5.wtf",
+"c": "Explain like I'm 5",
+"m": "plan",
+"p": "The confusing stuff, explained like you're five.",
+"s": 8.5
+},
+{
+"h": "goodestboy.dog",
+"c": "Dogs",
+"m": "plan",
+"p": "For the goodest boys (and girls).",
+"s": 8.5
+},
+{
+"h": "itworkedonmymachine.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For every coder who said it worked on my machine.",
+"s": 8.5
+},
+{
+"h": "fennsma.sh",
+"c": "Fun and games",
+"m": "starter",
+"p": "Smash things in a game made for joy and stress relief.",
+"s": 8.5,
+"u": "https://fennsma.sh/"
+},
+{
+"h": "whatisreality.wtf",
+"c": "Fun and games",
+"m": "starter",
+"p": "The big question, answered as best we can.",
+"s": 8.0,
+"u": "https://whatisreality.wtf/"
+},
+{
+"h": "bedtime.monster",
+"c": "Fun and games",
+"m": "plan",
+"p": "Bedtime stories where the monster is the nice one.",
+"s": 8.0
+},
+{
+"h": "cheaperthan.coffee",
+"c": "Fun and games",
+"m": "plan",
+"p": "Things that cost less than a cup of coffee.",
+"s": 8.0
+},
+{
+"h": "procrastinate.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For pro procrastinators. We'll finish this page later.",
+"s": 8.0
+},
+{
+"h": "honorable.charity",
+"c": "Giving and trust",
+"m": "starter",
+"p": "A sincere home for honorable giving: give with care, and honor the people who do right by others. Donations open soon.",
+"s": 8.0,
+"u": "https://honorable.charity/"
+},
+{
+"h": "mindru.sh",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Quick brain games for a rush of focus.",
+"s": 8.0,
+"u": "https://mindru.sh/"
+},
+{
+"h": "whatis67.wtf",
+"c": "Fun and games",
+"m": "starter",
+"p": "The 67 meme explained for confused parents and teachers.",
+"s": 8.0,
+"u": "https://whatis67.wtf/"
+},
+{
+"h": "doomscroll.monster",
+"c": "Fun and games",
+"m": "starter",
+"p": "Catch the doomscroll monster and trade endless scrolling for something that feels good.",
+"s": 7.5,
+"u": "https://doomscroll.monster/"
+},
+{
+"h": "aiforecast.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Forecasts for small businesses that say what they know, what they guess, and how sure they are.",
+"s": 7.5,
+"u": "https://aiforecast.ing/"
+},
+{
+"h": "dreamweav.ing",
+"c": "Fun and games",
+"m": "starter",
+"p": "Weave your dreams into stories, art, and plans.",
+"s": 7.5,
+"u": "https://dreamweav.ing/"
+},
+{
+"h": "dadjoke.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "A dad joke a day.",
+"s": 7.5
+},
+{
+"h": "excusegenerator.pro",
+"c": "Fun and games",
+"m": "plan",
+"p": "A silly excuse generator.",
+"s": 7.5
+},
+{
+"h": "mansbestfriend.dog",
+"c": "Dogs",
+"m": "plan",
+"p": "Man's best friend.",
+"s": 7.5
+},
+{
+"h": "hallucinate.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For pros at making things up: spot AI hallucinations and laugh at the best ones.",
+"s": 7.5
+},
+{
+"h": "cosmicru.sh",
+"c": "Fun and games",
+"m": "starter",
+"p": "A fast space game for one quick break.",
+"s": 7.5,
+"u": "https://cosmicru.sh/"
+},
+{
+"h": "grillsergeant.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "Grilling tips from the grill sergeant.",
+"s": 7.5
+},
+{
+"h": "memelord.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For memelords.",
+"s": 7.5
+},
+{
+"h": "notapro.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For people who are not pros.",
+"s": 7.5
+},
+{
+"h": "punslinger.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "The fastest puns in the west.",
+"s": 7.5
+},
+{
+"h": "aiformyparents.com",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Help your parents start with AI, safely and slowly.",
+"s": 7.0
+},
+{
+"h": "adulting.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "Grown-up life skills, one small win at a time.",
+"s": 7.0
+},
+{
+"h": "couchadvice.com",
+"c": "Fun and games",
+"m": "plan",
+"p": "Advice from the couch: honest, funny, free.",
+"s": 7.0
+},
+{
+"h": "eli5.world",
+"c": "Explain like I'm 5",
+"m": "plan",
+"p": "The world, explained like you're five.",
+"s": 7.0
+},
+{
+"h": "madebyai.website",
+"c": "Website building",
+"m": "starter",
+"p": "A badge and gallery for websites made by AI, with how each one was built.",
+"s": 7.0,
+"u": "https://madebyai.website/"
+},
+{
+"h": "notascam.charity",
+"c": "Giving and trust",
+"m": "starter",
+"p": "This is not a scam. We know that is exactly what a scam would say, and we say it anyway. Donations open soon.",
+"s": 7.0,
+"u": "https://notascam.charity/"
+},
+{
+"h": "cheapdate.live",
+"c": "Fun and games",
+"m": "plan",
+"p": "Cheap, fun date ideas near you.",
+"s": 7.0
+},
+{
+"h": "eli5.lol",
+"c": "Explain like I'm 5",
+"m": "plan",
+"p": "Funny things, explained like you're five.",
+"s": 7.0
+},
+{
+"h": "eli5.pro",
+"c": "Explain like I'm 5",
+"m": "plan",
+"p": "Pro topics, explained like you're five.",
+"s": 7.0
+},
+{
+"h": "eli5.science",
+"c": "Explain like I'm 5",
+"m": "plan",
+"p": "Science, explained like you're five.",
+"s": 7.0
+},
+{
+"h": "excuses.pro",
+"c": "Fun and games",
+"m": "plan",
+"p": "The best excuses, ranked.",
+"s": 7.0
+},
+{
+"h": "grandpa.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For pro grandpas.",
+"s": 7.0
+},
+{
+"h": "llmwhisperer.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Tips for whispering to large language models.",
+"s": 7.0
+},
+{
+"h": "maincharacter.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "Live like the main character.",
+"s": 7.0
+},
+{
+"h": "professionalgrandma.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For professional grandmas.",
+"s": 7.0
+},
+{
+"h": "thefinalcountdown.app",
+"c": "Fun and games",
+"m": "plan",
+"p": "A countdown app for any big day.",
+"s": 7.0
+},
+{
+"h": "aiestimat.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Fast, clear job estimates for trades and services, with every number explained.",
+"s": 7.0,
+"u": "https://aiestimat.ing/"
+},
+{
+"h": "buildmysite.click",
+"c": "Website building",
+"m": "starter",
+"p": "Click, answer a few questions, and get a site that is yours to keep.",
+"s": 7.0,
+"u": "https://buildmysite.click/"
+},
+{
+"h": "trustme.charity",
+"c": "Giving and trust",
+"m": "starter",
+"p": "Trust us. Yes, we know that is what a scam says too. It is still not a scam. Donations open soon.",
+"s": 7.0,
+"u": "https://trustme.charity/"
+},
+{
+"h": "almostpro.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For people who are almost pros, and proud of it.",
+"s": 7.0
+},
+{
+"h": "armchairexpert.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "A home for armchair experts and their hot takes.",
+"s": 7.0
+},
+{
+"h": "backseatdriver.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "Funny gifts and memes for backseat drivers.",
+"s": 7.0
+},
+{
+"h": "bugslayer.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For coders who slay bugs.",
+"s": 7.0
+},
+{
+"h": "buttonmasher.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For gamers who mash buttons and win anyway.",
+"s": 7.0
+},
+{
+"h": "humanity.dog",
+"c": "Humanity",
+"m": "plan",
+"p": "Humanity's best friend.",
+"s": 7.0
+},
+{
+"h": "kindapro.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For people who are kinda pros.",
+"s": 7.0
+},
+{
+"h": "laughsmith.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "A smith of laughs.",
+"s": 7.0
+},
+{
+"h": "overthinker.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For overthinkers.",
+"s": 7.0
+},
+{
+"h": "professionaloverthinker.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For professional overthinkers.",
+"s": 7.0
+},
+{
+"h": "punmaster.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "Puns, mastered.",
+"s": 7.0
+},
+{
+"h": "ragequitter.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For rage quitters.",
+"s": 7.0
+},
+{
+"h": "replyall.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For people who hit reply all.",
+"s": 7.0
+},
+{
+"h": "selfproclaimed.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For self-proclaimed pros.",
+"s": 7.0
+},
+{
+"h": "sidecharacter.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For proud side characters.",
+"s": 7.0
+},
+{
+"h": "tokenburner.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "For people who burn AI tokens.",
+"s": 7.0
+},
+{
+"h": "whine.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For pro whiners.",
+"s": 7.0
+},
+{
+"h": "corrupt.charity",
+"c": "Giving and trust",
+"m": "starter",
+"p": "We spend it however we want. At least we are honest about it. Donations open soon.",
+"s": 7.0,
+"u": "https://corrupt.charity/"
+},
+{
+"h": "agentstaff.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Find the right AI agent for a job the way you would hire a person: skills, references, and a trial run.",
+"s": 6.5,
+"u": "https://agentstaff.ing/"
+},
+{
+"h": "mcpstore.tech",
+"c": "AI agents and business",
+"m": "starter",
+"p": "A directory of MCP tools that connect AI assistants to apps, with honest ratings.",
+"s": 6.5,
+"u": "https://mcpstore.tech/"
+},
+{
+"h": "growoldwithai.com",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Grow old with AI as a helper, not a replacement.",
+"s": 6.5
+},
+{
+"h": "agentorchestrat.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Many AI agents working as one team, each with a clear job, a shared plan, and a human conductor.",
+"s": 6.5,
+"u": "https://agentorchestrat.ing/"
+},
+{
+"h": "agentshopp.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "An AI agent that finds the best deal, compares honestly, and asks you before it buys anything.",
+"s": 6.5,
+"u": "https://agentshopp.ing/"
+},
+{
+"h": "aiaccount.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Accounting help for small businesses, with AI doing the sorting and a person signing off.",
+"s": 6.5,
+"u": "https://aiaccount.ing/"
+},
+{
+"h": "aiauditor.tech",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Audit help that checks every line, flags what looks wrong, and explains why.",
+"s": 6.5,
+"u": "https://aiauditor.tech/"
+},
+{
+"h": "aibudget.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "A budget that builds itself from your real spending and talks to you in plain words.",
+"s": 6.5,
+"u": "https://aibudget.ing/"
+},
+{
+"h": "endgame.life",
+"c": "Our main sites",
+"m": "family",
+"p": "The vision, after both dashboards.",
+"s": 6.5,
+"u": "https://endgame.life/"
+},
+{
+"h": "agentwhisperer.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Tips for getting AI agents to do what you mean.",
+"s": 6.5
+},
+{
+"h": "aidog.dog",
+"c": "Dogs",
+"m": "plan",
+"p": "AI tools for dog owners: training plans, health notes, walk logs.",
+"s": 6.5
+},
+{
+"h": "humanity.feedback",
+"c": "Humanity",
+"m": "plan",
+"p": "Feedback for all of humanity.",
+"s": 6.5
+},
+{
+"h": "onepersonstartup.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Run a one-person startup with AI.",
+"s": 6.5
+},
+{
+"h": "vibeengineer.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "For vibe engineers.",
+"s": 6.5
+},
+{
+"h": "aibookkeep.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Bookkeeping for small businesses: receipts in, clean books out, a person checks the result.",
+"s": 6.5,
+"u": "https://aibookkeep.ing/"
+},
+{
+"h": "aitamer.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Taming AI: keep it useful, honest and safe.",
+"s": 6.5
+},
+{
+"h": "aiwrangler.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Wrangling AI tools so they work together.",
+"s": 6.5
+},
+{
+"h": "complainer.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "A safe place to complain, then feel better.",
+"s": 6.5
+},
+{
+"h": "couchpotato.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For proud couch potatoes.",
+"s": 6.5
+},
+{
+"h": "eli5.dating",
+"c": "Explain like I'm 5",
+"m": "plan",
+"p": "Dating, explained like you're five.",
+"s": 6.5
+},
+{
+"h": "grandpajokes.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "Grandpa jokes, worse than dad jokes.",
+"s": 6.5
+},
+{
+"h": "prankster.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "Harmless pranks.",
+"s": 6.5
+},
+{
+"h": "prettymuchpro.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For people who are pretty much pros.",
+"s": 6.5
+},
+{
+"h": "reallyamateur.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For proud amateurs.",
+"s": 6.5
+},
+{
+"h": "semipro.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For semi-pros.",
+"s": 6.5
+},
+{
+"h": "silvertongue.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For silver tongues.",
+"s": 6.5
+},
+{
+"h": "sortapro.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For people who are sorta pros.",
+"s": 6.5
+},
+{
+"h": "totalamateur.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For total amateurs.",
+"s": 6.5
+},
+{
+"h": "hallucination.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "A field guide to AI hallucinations: what they are and how to catch them.",
+"s": 6.5
+},
+{
+"h": "rekindl.ing",
+"c": "AI help for seniors and families",
+"m": "starter",
+"p": "Rekindle old friendships, old hobbies, and old joys.",
+"s": 6.0,
+"u": "https://rekindl.ing/"
+},
+{
+"h": "vibecheck.monster",
+"c": "Fun and games",
+"m": "starter",
+"p": "A quick, friendly vibe check for you and your friends.",
+"s": 6.0,
+"u": "https://vibecheck.monster/"
+},
+{
+"h": "aiforoldtimers.com",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "A friendly, funny AI guide for old-timers.",
+"s": 6.0
+},
+{
+"h": "gravitydefy.ing",
+"c": "Fun and games",
+"m": "starter",
+"p": "Physics that seems to defy gravity, explained simply.",
+"s": 6.0,
+"u": "https://gravitydefy.ing/"
+},
+{
+"h": "lifeaffirm.ing",
+"c": "AI help for seniors and families",
+"m": "starter",
+"p": "A daily dose of things that make life feel worth it.",
+"s": 6.0,
+"u": "https://lifeaffirm.ing/"
+},
+{
+"h": "mindbend.ing",
+"c": "Fun and games",
+"m": "starter",
+"p": "Ideas that bend your mind, tested against reality.",
+"s": 6.0,
+"u": "https://mindbend.ing/"
+},
+{
+"h": "personaldash.life",
+"c": "Our main sites",
+"m": "family",
+"p": "Flagship: your helping hand into the blossoming world of AI.",
+"s": 6.0,
+"u": "https://personaldash.life/"
+},
+{
+"h": "pontificat.ing",
+"c": "Fun and games",
+"m": "starter",
+"p": "Big opinions, kindly delivered, with every claim tied to something you can check.",
+"s": 6.0,
+"u": "https://pontificat.ing/"
+},
+{
+"h": "reactionapp.life",
+"c": "Our main sites",
+"m": "family",
+"p": "Record and share your reactions.",
+"s": 6.0,
+"u": "https://reactionapp.life/"
+},
+{
+"h": "renegade.monster",
+"c": "Fun and games",
+"m": "starter",
+"p": "A monster that breaks the rules for fun. Quick to try, easy to share.",
+"s": 6.0,
+"u": "https://renegade.monster/"
+},
+{
+"h": "showstopp.ing",
+"c": "Fun and games",
+"m": "starter",
+"p": "Make something so good it stops the show.",
+"s": 6.0,
+"u": "https://showstopp.ing/"
+},
+{
+"h": "workdash.life",
+"c": "Our main sites",
+"m": "family",
+"p": "The work dash, the future V2 of the personal dash.",
+"s": 6.0
+},
+{
+"h": "aimentor.ing",
+"c": "AI agents and business",
+"m": "plan",
+"p": "An AI mentor that helps you learn any skill.",
+"s": 6.0
+},
+{
+"h": "aistorytell.ing",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Make stories with AI, for kids and grown-ups.",
+"s": 6.0
+},
+{
+"h": "backyardchef.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "Recipes and grilling tips for backyard chefs.",
+"s": 6.0
+},
+{
+"h": "mindboggl.ing",
+"c": "Fun and games",
+"m": "starter",
+"p": "The most mind boggling true facts, each with a source.",
+"s": 6.0,
+"u": "https://mindboggl.ing/"
+},
+{
+"h": "moneygrubbing.money",
+"c": "Giving and trust",
+"m": "starter",
+"p": "Satire about greed, and the real cost of chasing money over joy.",
+"s": 6.0,
+"u": "https://moneygrubbing.money/"
+},
+{
+"h": "nailbit.ing",
+"c": "Fun and games",
+"m": "starter",
+"p": "The most nail biting moments, stories, and games.",
+"s": 6.0,
+"u": "https://nailbit.ing/"
+},
+{
+"h": "oneclicksite.click",
+"c": "Website building",
+"m": "starter",
+"p": "One click to a working website for your small business.",
+"s": 6.0,
+"u": "https://oneclicksite.click/"
+},
+{
+"h": "rabblerous.ing",
+"c": "Fun and games",
+"m": "starter",
+"p": "Make noise for good causes, peacefully and honestly.",
+"s": 6.0,
+"u": "https://rabblerous.ing/"
+},
+{
+"h": "rulebreak.ing",
+"c": "Fun and games",
+"m": "starter",
+"p": "Break the rules that should be broken, and keep the ones that protect people.",
+"s": 6.0,
+"u": "https://rulebreak.ing/"
+},
+{
+"h": "bingewatch.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "What to binge next, picked for you.",
+"s": 6.0
+},
+{
+"h": "coffeeaddict.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For coffee addicts: brews, gear and jokes.",
+"s": 6.0
+},
+{
+"h": "dadlife.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "Tips and laughs for dads.",
+"s": 6.0
+},
+{
+"h": "humanity.rest",
+"c": "Humanity",
+"m": "plan",
+"p": "Rest for all of humanity.",
+"s": 6.0
+},
+{
+"h": "internetexpert.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For self-made internet experts.",
+"s": 6.0
+},
+{
+"h": "momlife.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "Tips and laughs for moms.",
+"s": 6.0
+},
+{
+"h": "multitasker.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For proud multitaskers.",
+"s": 6.0
+},
+{
+"h": "pixelpusher.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For pixel pushers.",
+"s": 6.0
+},
+{
+"h": "promptsmith.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Prompt smithing.",
+"s": 6.0
+},
+{
+"h": "worrier.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For worriers.",
+"s": 6.0
+},
+{
+"h": "hallucinations.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "A gallery of the funniest AI hallucinations, collected and checked.",
+"s": 6.0
+},
+{
+"h": "agentbuilt.website",
+"c": "AI agents and business",
+"m": "starter",
+"p": "A showcase of websites built end to end by AI agents, with the prompts and the process shown in the open.",
+"s": 5.5,
+"u": "https://agentbuilt.website/"
+},
+{
+"h": "agentmarket.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Marketing run with AI agents: plans, posts, and reports, with a person checking every step.",
+"s": 5.5,
+"u": "https://agentmarket.ing/"
+},
+{
+"h": "aihir.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Fairer hiring with AI that explains every recommendation and checks itself for bias.",
+"s": 5.5,
+"u": "https://aihir.ing/"
+},
+{
+"h": "agentmonitor.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Watch what your AI agents do, catch mistakes early, and keep a clear record of every action.",
+"s": 5.5,
+"u": "https://agentmonitor.ing/"
+},
+{
+"h": "aivideoedit.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Cut, caption, and polish video by describing what you want.",
+"s": 5.5,
+"u": "https://aivideoedit.ing/"
+},
+{
+"h": "startupbuild.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Build a startup with AI from idea to first customer, in the open.",
+"s": 5.5,
+"u": "https://startupbuild.ing/"
+},
+{
+"h": "agentbrows.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Teach an AI agent to browse the web for you, and see every page it visits and every click it makes.",
+"s": 5.5,
+"u": "https://agentbrows.ing/"
+},
+{
+"h": "sitebuild.ing",
+"c": "Website building",
+"m": "starter",
+"p": "Build a website with AI, step by step, and learn as you go.",
+"s": 5.5,
+"u": "https://sitebuild.ing/"
+},
+{
+"h": "webbuild.ing",
+"c": "Website building",
+"m": "starter",
+"p": "Learn to build websites with AI, from your first page to your first business.",
+"s": 5.5,
+"u": "https://webbuild.ing/"
+},
+{
+"h": "hornswoggl.ing",
+"c": "Fun and games",
+"m": "starter",
+"p": "Learn the classic cons and scams, so no one can hornswoggle you.",
+"s": 5.0,
+"u": "https://hornswoggl.ing/"
+},
+{
+"h": "aiwebhost.ing",
+"c": "Website building",
+"m": "starter",
+"p": "Hosting that sets itself up, watches itself, and tells you in plain words when something is wrong.",
+"s": 5.0,
+"u": "https://aiwebhost.ing/"
+},
+{
+"h": "aiforgrandparents.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: a free starter guide to AI for grandparents."
+},
+{
+"h": "grandkids.life",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free grandparent activity ideas."
+},
+{
+"h": "askgrandma.fun",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: one wise tip per day."
+},
+{
+"h": "aurafarm.monster",
+"c": "Fun and games",
+"m": "starter",
+"p": "A playful place to collect good moments and share them, no likes needed.",
+"u": "https://aurafarm.monster/"
+},
+{
+"h": "callgrandma.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: nudges to call grandma."
+},
+{
+"h": "downsizing.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: step-by-step guide with AI helper deciding what to keep."
+},
+{
+"h": "elderhelp.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free resource hub on common elder concerns."
+},
+{
+"h": "familyalbum.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free AI helper sorting and captioning photos."
+},
+{
+"h": "familycall.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free step-by-step video call tutorials."
+},
+{
+"h": "familyrecipes.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free chat that digitises handwritten recipes."
+},
+{
+"h": "frontporchai.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free storytelling prompts."
+},
+{
+"h": "gentleai.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free large-print guide."
+},
+{
+"h": "goldenyearsai.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free large-print primers."
+},
+{
+"h": "gramps.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free tech guides for grandpas."
+},
+{
+"h": "mygrandma.life",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free gentle AI companion explaining tech to seniors."
+},
+{
+"h": "agentbrew.beer",
+"c": "Brewing",
+"m": "starter",
+"p": "An AI brewing assistant that plans recipes, tracks fermentation, and keeps a brew log for home and craft brewers.",
+"u": "https://agentbrew.beer/"
+},
+{
+"h": "aiautomat.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Turn the boring, repeated parts of your work into automations you understand and control.",
+"u": "https://aiautomat.ing/"
+},
+{
+"h": "aibrew.beer",
+"c": "Brewing",
+"m": "starter",
+"p": "Brew better beer at home with an AI guide for every step, from grain to glass.",
+"u": "https://aibrew.beer/"
+},
+{
+"h": "aicomedy.live",
+"c": "Fun and games",
+"m": "starter",
+"p": "Live comedy where people and AI trade jokes in real time, and the audience decides who wins.",
+"u": "https://aicomedy.live/"
+},
+{
+"h": "aifollowup.tech",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Never forget to follow up: AI reminds, drafts, and tracks every customer conversation.",
+"u": "https://aifollowup.tech/"
+},
+{
+"h": "aiforgrandma.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: a free, gentle demo of AI made for grandmas."
+},
+{
+"h": "aiforgrandpa.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: a free, gentle demo of AI made for grandpas."
+},
+{
+"h": "aigameshow.live",
+"c": "Fun and games",
+"m": "starter",
+"p": "A game show where people play against and alongside AI, streamed live.",
+"u": "https://aigameshow.live/"
+},
+{
+"h": "aigrantwrit.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Help nonprofits find grants and write strong, honest applications.",
+"u": "https://aigrantwrit.ing/"
+},
+{
+"h": "aiillustrat.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Illustration with AI as a partner to human artists, with credit where credit is due.",
+"u": "https://aiillustrat.ing/"
+},
+{
+"h": "aiintern.tech",
+"c": "AI agents and business",
+"m": "starter",
+"p": "An AI intern for small teams: research, drafts, and busywork, checked by a person.",
+"u": "https://aiintern.tech/"
+},
+{
+"h": "aiinvoic.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Invoices that send themselves, follow up politely, and keep your cash flow clear.",
+"u": "https://aiinvoic.ing/"
+},
+{
+"h": "aimadesimple.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: a free chat that explains AI in plain words."
+},
+{
+"h": "aiporch.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: simple big-button AI chat for seniors, no signup."
+},
+{
+"h": "aipropertymanager.tech",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Property management help for small landlords: tenants, repairs, and rent in one calm place.",
+"u": "https://aipropertymanager.tech/"
+},
+{
+"h": "aitranslat.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Translation with AI and a human check, for businesses that need to be understood everywhere.",
+"u": "https://aitranslat.ing/"
+},
+{
+"h": "aiwithgrandma.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: simple video and chat intro to AI for grandmas."
+},
+{
+"h": "aiwithnana.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: first steps with AI in plain language."
+},
+{
+"h": "askgrandma.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: practical tips in a friendly voice."
+},
+{
+"h": "askgrandpa.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: DIY tips in friendly voice."
+},
+{
+"h": "boomerai.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: simple intro pages to AI."
+},
+{
+"h": "boomerhelper.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: step-by-step phone and AI guides."
+},
+{
+"h": "botbattle.live",
+"c": "Fun and games",
+"m": "starter",
+"p": "Watch AI bots compete live in games, puzzles, and debates.",
+"u": "https://botbattle.live/"
+},
+{
+"h": "brewagent.beer",
+"c": "Brewing",
+"m": "starter",
+"p": "An AI agent for brewers that orders supplies, tracks batches, and never forgets a step.",
+"u": "https://brewagent.beer/"
+},
+{
+"h": "brewbot.beer",
+"c": "Brewing",
+"m": "starter",
+"p": "A friendly brewing bot that answers any homebrew question.",
+"u": "https://brewbot.beer/"
+},
+{
+"h": "caregiverai.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: a starter checklist for new caregivers."
+},
+{
+"h": "caregivers.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: checklists and guides."
+},
+{
+"h": "carenotes.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: a shared, simple care notebook."
+},
+{
+"h": "comfortai.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: short calming exercises."
+},
+{
+"h": "cozyai.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free printable first-week guides to using AI without stress."
+},
+{
+"h": "dragonrider.quest",
+"c": "Fun and games",
+"m": "starter",
+"p": "Quests and challenges for would-be dragon riders of every age.",
+"u": "https://dragonrider.quest/"
+},
+{
+"h": "easyai.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free step-by-step first lessons."
+},
+{
+"h": "eldersai.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free large-print guide."
+},
+{
+"h": "familyhistory.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free interview guide and chat helper."
+},
+{
+"h": "friendlyai.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: a free first tutorial on AI."
+},
+{
+"h": "glitterbomb.monster",
+"c": "Fun and games",
+"m": "starter",
+"p": "Send a friend a surprise burst of digital glitter and joy.",
+"u": "https://glitterbomb.monster/"
+},
+{
+"h": "goldenhelper.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: a free hub of helpers."
+},
+{
+"h": "gramps.life",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free storytelling prompts."
+},
+{
+"h": "grandmas.life",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free story hub."
+},
+{
+"h": "maincharacter.quest",
+"c": "Fun and games",
+"m": "starter",
+"p": "Quests that help you live like the main character of your own story, kindly.",
+"u": "https://maincharacter.quest/"
+},
+{
+"h": "robobrew.beer",
+"c": "Brewing",
+"m": "starter",
+"p": "Robots and AI in the brewery: automation for small brewers.",
+"u": "https://robobrew.beer/"
+},
+{
+"h": "vibebrew.beer",
+"c": "Brewing",
+"m": "starter",
+"p": "Find a beer that matches your vibe.",
+"u": "https://vibebrew.beer/"
+},
+{
+"h": "claudebomb.ai",
+"c": "Our main sites",
+"m": "plan",
+"p": "Points to claudebomb.com."
+},
+{
+"h": "connectivetissue.pro",
+"c": "Body and movement",
+"m": "plan",
+"p": "Connective tissue (often called fascia), explained."
+},
+{
+"h": "elevatehumanity.life",
+"c": "Elevate humanity",
+"m": "plan",
+"p": "Our mission, elevating humanity, in one place."
+},
+{
+"h": "ilovedogs.app",
+"c": "Dogs",
+"m": "plan",
+"p": "An app for people who love dogs."
+},
+{
+"h": "65plus.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free plain-language chat assistant for seniors' tech and daily questions."
+},
+{
+"h": "agewell.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free daily tips for older adults."
+},
+{
+"h": "aiathome.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free daily how-to cards."
+},
+{
+"h": "aibartender.beer",
+"c": "Brewing",
+"m": "starter",
+"p": "Tell it what you like and it suggests a beer or a drink, and teaches you why it fits.",
+"u": "https://aibartender.beer/"
+},
+{
+"h": "aibasics.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free glossary and walkthroughs."
+},
+{
+"h": "aibrewery.beer",
+"c": "Brewing",
+"m": "starter",
+"p": "Tools that help small breweries plan batches, track stock, and tell their story.",
+"u": "https://aibrewery.beer/"
+},
+{
+"h": "aicorner.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free assistant for daily tech questions."
+},
+{
+"h": "aiforboomers.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free ten-minute AI intro."
+},
+{
+"h": "aiforelders.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: a free chat that answers everyday tech questions."
+},
+{
+"h": "aigrantwriter.tech",
+"c": "AI agents and business",
+"m": "starter",
+"p": "The grant writer for small nonprofits that cannot afford one.",
+"u": "https://aigrantwriter.tech/"
+},
+{
+"h": "aiisfriendly.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: a free demo for first-time AI users."
+},
+{
+"h": "aiissafe.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: paste a message you are unsure about, and get a plain answer on whether it looks like a scam."
+},
+{
+"h": "aimadesafe.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: a free checker for web pages that look suspicious."
+},
+{
+"h": "aiparlor.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: a free, friendly daily chat."
+},
+{
+"h": "aiplann.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Plans for projects, trips, and weeks that adjust when life happens.",
+"u": "https://aiplann.ing/"
+},
+{
+"h": "aisalesrep.tech",
+"c": "AI agents and business",
+"m": "starter",
+"p": "An AI sales rep that answers questions honestly, books calls, and hands off to a person.",
+"u": "https://aisalesrep.tech/"
+},
+{
+"h": "aisetter.tech",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Book appointments around the clock without double bookings or pushy scripts.",
+"u": "https://aisetter.tech/"
+},
+{
+"h": "aitaxfil.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Understand your taxes in plain words before you file, and know what to ask a professional.",
+"u": "https://aitaxfil.ing/"
+},
+{
+"h": "aivoiceact.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Voice acting with AI, built with consent and fair pay for the human voices behind it.",
+"u": "https://aivoiceact.ing/"
+},
+{
+"h": "aiwithgrandpa.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: simple intro to AI for grandpas."
+},
+{
+"h": "askbox.help",
+"c": "Everyday help",
+"m": "plan",
+"p": "Idea: free anonymous Q&A for groups."
+},
+{
+"h": "askgranny.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: daily tips with a granny's wisdom."
+},
+{
+"h": "asknana.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: encouraging daily message."
+},
+{
+"h": "askpapa.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: daily dad-style tips."
+},
+{
+"h": "askthenurse.help",
+"c": "Everyday help",
+"m": "plan",
+"p": "Idea: help writing down what to ask your clinician."
+},
+{
+"h": "billhelper.help",
+"c": "Everyday help",
+"m": "plan",
+"p": "Idea: upload a bill, get plain-English summary."
+},
+{
+"h": "boomershelper.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: a simple FAQ for everyday tech."
+},
+{
+"h": "builtbyai.website",
+"c": "Website building",
+"m": "starter",
+"p": "A badge and directory for websites built with AI, with honest notes on how each was made.",
+"u": "https://builtbyai.website/"
+},
+{
+"h": "callgrandpa.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: nudges to call grandpa."
+},
+{
+"h": "caregiverhelp.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: curated links and guides."
+},
+{
+"h": "caregiverhub.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: shared notes for a family's caregivers."
+},
+{
+"h": "celebrationoflife.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: helps draft a tribute."
+},
+{
+"h": "churchfamily.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free templates for church groups."
+},
+{
+"h": "craftai.beer",
+"c": "Brewing",
+"m": "starter",
+"p": "Where craft brewing meets AI: recipe ideas, label art, and brewer stories.",
+"u": "https://craftai.beer/"
+},
+{
+"h": "createjoy.art",
+"c": "Fun and games",
+"m": "starter",
+"p": "Make something that brings joy, share it, and inspire someone else to make something too.",
+"u": "https://createjoy.art/"
+},
+{
+"h": "definitelyreal.charity",
+"c": "Giving and trust",
+"m": "starter",
+"p": "Definitely real. Very real. The realest. We can tell this sounds like a scam, and it is not one. Donations open soon.",
+"u": "https://definitelyreal.charity/"
+},
+{
+"h": "doctornotes.help",
+"c": "Everyday help",
+"m": "plan",
+"p": "Idea: free tool turning symptoms into a question list for appointments."
+},
+{
+"h": "familychat.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free guide to family group chats."
+},
+{
+"h": "familystories.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free weekly prompt list."
+},
+{
+"h": "familytableai.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free dinner conversation starters."
+},
+{
+"h": "fixedincome.help",
+"c": "Everyday help",
+"m": "plan",
+"p": "Idea: free budgeting tips for seniors."
+},
+{
+"h": "fraudcheck.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free AI that checks suspicious messages."
+},
+{
+"h": "goodbyeletters.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free guided letter prompts."
+},
+{
+"h": "microsaas.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Build and run a tiny software business on your own, with AI as your team.",
+"u": "https://microsaas.ing/"
+},
+{
+"h": "65plus.online",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Plain-English AI help for people 65 and up."
+},
+{
+"h": "aiathome.online",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Gentle first steps with AI at home."
+},
+{
+"h": "aiforboomers.online",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "AI explained for boomers, no jargon."
+},
+{
+"h": "bodyworker.pro",
+"c": "Body and movement",
+"m": "plan",
+"p": "A directory and guide for bodyworkers."
+},
+{
+"h": "breathcoach.pro",
+"c": "Body and movement",
+"m": "plan",
+"p": "Simple breathing practices, coached."
+},
+{
+"h": "claudebomb.app",
+"c": "Our main sites",
+"m": "plan",
+"p": "Points to claudebomb.com."
+},
+{
+"h": "claudebomb.net",
+"c": "Our main sites",
+"m": "plan",
+"p": "Points to claudebomb.com."
+},
+{
+"h": "claudebomb.org",
+"c": "Our main sites",
+"m": "plan",
+"p": "Points to claudebomb.com."
+},
+{
+"h": "dashboarddesigner.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Design your own AI dashboard."
+},
+{
+"h": "dogtrainer.pro",
+"c": "Dogs",
+"m": "plan",
+"p": "Dog training help and trainer finder."
+},
+{
+"h": "ethicalhacker.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "Learn ethical hacking, safely and legally."
+},
+{
+"h": "excelwizard.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "Spreadsheet tricks from Excel wizards."
+},
+{
+"h": "fasciacoach.pro",
+"c": "Body and movement",
+"m": "plan",
+"p": "Coaching for healthy connective tissue (often called fascia)."
+},
+{
+"h": "freeforever.pro",
+"c": "Our main sites",
+"m": "plan",
+"p": "Our promise: free forever."
+},
+{
+"h": "grandkids.tech",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Grandkids teach grandparents tech."
+},
+{
+"h": "ilovedogs.pet",
+"c": "Dogs",
+"m": "plan",
+"p": "For people who love dogs and pets."
+},
+{
+"h": "indiehacker.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Tools for indie hackers."
+},
+{
+"h": "mobilitycoach.pro",
+"c": "Body and movement",
+"m": "plan",
+"p": "Mobility coaching."
+},
+{
+"h": "movementcoach.pro",
+"c": "Body and movement",
+"m": "plan",
+"p": "Movement coaching."
+},
+{
+"h": "personaldash.pro",
+"c": "Our main sites",
+"m": "plan",
+"p": "Points to personaldash.life."
+},
+{
+"h": "promptbomb.pro",
+"c": "Our main sites",
+"m": "plan",
+"p": "Points to claudebomb.com."
+},
+{
+"h": "retiredpro.pro",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "For retired pros."
+},
+{
+"h": "wholebody.pro",
+"c": "Body and movement",
+"m": "plan",
+"p": "The whole body, as one system."
+},
+{
+"h": "workdash.app",
+"c": "Our main sites",
+"m": "plan",
+"p": "Points to workdash.life."
+},
+{
+"h": "youraidash.online",
+"c": "Our main sites",
+"m": "plan",
+"p": "Points to personaldash.life."
+},
+{
+"h": "agentmonitor.tech",
+"c": "AI agents and business",
+"m": "starter",
+"p": "The tools behind agent monitoring: dashboards, alerts, and audit trails for teams that run AI agents.",
+"u": "https://agentmonitor.tech/"
+},
+{
+"h": "agingwell.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free home safety and wellbeing checklist."
+},
+{
+"h": "aiadjuster.tech",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Faster, fairer insurance claim estimates with AI that shows its reasoning to both sides.",
+"u": "https://aiadjuster.tech/"
+},
+{
+"h": "aibookkeeper.tech",
+"c": "AI agents and business",
+"m": "starter",
+"p": "The bookkeeper that never sleeps, built for freelancers and small shops.",
+"u": "https://aibookkeeper.tech/"
+},
+{
+"h": "aiclos.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Sales help for the last step: answer questions, remove doubt, and keep every promise honest.",
+"u": "https://aiclos.ing/"
+},
+{
+"h": "aicontractor.tech",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Software for contractors: quotes, schedules, and customer updates handled by AI.",
+"u": "https://aicontractor.tech/"
+},
+{
+"h": "aielectrician.tech",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Tools for electricians: estimates, code lookups, and job notes in one place.",
+"u": "https://aielectrician.tech/"
+},
+{
+"h": "aiestimator.tech",
+"c": "AI agents and business",
+"m": "starter",
+"p": "The estimating engine behind fair quotes for contractors and their customers.",
+"u": "https://aiestimator.tech/"
+},
+{
+"h": "aiintake.tech",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Friendly intake for law offices and clinics: the right questions, asked kindly, sorted well.",
+"u": "https://aiintake.tech/"
+},
+{
+"h": "aileasing.tech",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Help landlords and renters with listings, questions, and lease paperwork.",
+"u": "https://aileasing.tech/"
+},
+{
+"h": "aiparalegal.tech",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Paralegal help for small law firms: research, drafts, and deadlines, reviewed by a lawyer.",
+"u": "https://aiparalegal.tech/"
+},
+{
+"h": "aiphotoedit.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Edit photos by describing what you want, and keep the original safe.",
+"u": "https://aiphotoedit.ing/"
+},
+{
+"h": "aiplumber.tech",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Software for plumbers: booking, dispatch, quotes, and follow-ups in one place.",
+"u": "https://aiplumber.tech/"
+},
+{
+"h": "aiplumber.website",
+"c": "AI agents and business",
+"m": "starter",
+"p": "A ready-made website for plumbing businesses, set up in an afternoon.",
+"u": "https://aiplumber.website/"
+},
+{
+"h": "aiproposal.tech",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Write winning proposals faster, with every claim backed by a source.",
+"u": "https://aiproposal.tech/"
+},
+{
+"h": "aiquot.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Quotes customers understand, sent the same day they ask.",
+"u": "https://aiquot.ing/"
+},
+{
+"h": "airoofer.tech",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Tools for roofers: measurements, estimates, and storm-season scheduling.",
+"u": "https://airoofer.tech/"
+},
+{
+"h": "aitaxprep.tech",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Tax prep help for freelancers and small businesses, reviewed by a person.",
+"u": "https://aitaxprep.tech/"
+},
+{
+"h": "aiwebsite.click",
+"c": "Website building",
+"m": "starter",
+"p": "Describe your business, click once, and get a working website.",
+"u": "https://aiwebsite.click/"
+},
+{
+"h": "allinoneai.help",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Idea: plain-English guide to AI tools."
+},
+{
+"h": "allinonehelp.help",
+"c": "Everyday help",
+"m": "plan",
+"p": "Idea: curated simple guides for common tasks."
+},
+{
+"h": "askmeai.help",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Idea: simple AI Q&A box."
+},
+{
+"h": "crowdsource.charity",
+"c": "Giving and trust",
+"m": "starter",
+"p": "Let the crowd find and vet good causes together, in the open.",
+"u": "https://crowdsource.charity/"
+},
+{
+"h": "dailydevotional.help",
+"c": "Everyday help",
+"m": "plan",
+"p": "Idea: free daily reflection delivered by email and RSS."
+},
+{
+"h": "dreamsite.website",
+"c": "Website building",
+"m": "starter",
+"p": "Describe your dream website, and we help you build it.",
+"u": "https://dreamsite.website/"
+},
+{
+"h": "endoflifeplan.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free checklist covering wishes, documents and conversations."
+},
+{
+"h": "finalwishes.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free guided prompts for writing down your wishes."
+},
+{
+"h": "firststepai.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free guided first prompts."
+},
+{
+"h": "firststepsai.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free guided first prompts."
+},
+{
+"h": "goldensingles.help",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Idea: free tips for seniors online."
+},
+{
+"h": "goodguys.charity",
+"c": "Giving and trust",
+"m": "starter",
+"p": "Stories of everyday people doing good, shared to inspire more of it.",
+"u": "https://goodguys.charity/"
+},
+{
+"h": "philanthropic.charity",
+"c": "Giving and trust",
+"m": "starter",
+"p": "A plain guide to giving: how to find causes that match your values and check that your money helps.",
+"u": "https://philanthropic.charity/"
+},
+{
+"h": "sitefactory.tech",
+"c": "Website building",
+"m": "starter",
+"p": "Build many websites at once from one framework, the way we build ours.",
+"u": "https://sitefactory.tech/"
+},
+{
+"h": "sitelaunch.ing",
+"c": "Website building",
+"m": "starter",
+"p": "Launch your site the right way: domain, security, speed, and the first visitors.",
+"u": "https://sitelaunch.ing/"
+},
+{
+"h": "totallylegit.charity",
+"c": "Giving and trust",
+"m": "starter",
+"p": "Totally legit. Completely, entirely, one hundred percent legit. Please do not look into it. Okay, you can look into it. Donations open soon.",
+"u": "https://totallylegit.charity/"
+},
+{
+"h": "whatis67.fyi",
+"c": "Fun and games",
+"m": "starter",
+"p": "What 67 means, where it came from, and why kids keep saying it.",
+"u": "https://whatis67.fyi/"
+},
+{
+"h": "aianimator.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "An AI animator for short, simple explainer clips."
+},
+{
+"h": "aiforgrandpa.online",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "AI help made for grandpas."
+},
+{
+"h": "aiillustrator.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "An AI illustrator for small projects."
+},
+{
+"h": "aistoryteller.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "The pro version of AI storytelling."
+},
+{
+"h": "aistrategist.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "An AI strategist for small businesses."
+},
+{
+"h": "aiwithgrandma.online",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Learn AI together with grandma."
+},
+{
+"h": "allinoneai.online",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "One place for all your everyday AI help."
+},
+{
+"h": "askgrandpa.online",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Ask grandpa anything, with AI backup."
+},
+{
+"h": "askmeai.online",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Ask a friendly AI your questions."
+},
+{
+"h": "bottrainer.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Train your own AI bot, step by step."
+},
+{
+"h": "budtend.ing",
+"c": "Everyday help",
+"m": "plan",
+"p": "Learn what a budtender knows, where it is legal."
+},
+{
+"h": "captionwriter.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Captions for posts and videos, written fast."
+},
+{
+"h": "christmas2026.app",
+"c": "Fun and games",
+"m": "plan",
+"p": "A Christmas 2026 countdown and gift planner."
+},
+{
+"h": "claudebomb.art",
+"c": "Our main sites",
+"m": "plan",
+"p": "Points to claudebomb.com."
+},
+{
+"h": "claudebomb.life",
+"c": "Our main sites",
+"m": "plan",
+"p": "Points to claudebomb.com."
+},
+{
+"h": "claudebomb.online",
+"c": "Our main sites",
+"m": "plan",
+"p": "Points to claudebomb.com."
+},
+{
+"h": "claudebomb.pro",
+"c": "Our main sites",
+"m": "plan",
+"p": "Points to claudebomb.com."
+},
+{
+"h": "claudebomb.shop",
+"c": "Our main sites",
+"m": "plan",
+"p": "Points to claudebomb.com."
+},
+{
+"h": "claudebomb.space",
+"c": "Our main sites",
+"m": "plan",
+"p": "Points to claudebomb.com."
+},
+{
+"h": "claudebomb.store",
+"c": "Our main sites",
+"m": "plan",
+"p": "Points to claudebomb.com."
+},
+{
+"h": "claudebomb.xyz",
+"c": "Our main sites",
+"m": "plan",
+"p": "Points to claudebomb.com."
+},
+{
+"h": "clipeditor.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Quick video clip editing."
+},
+{
+"h": "coursecreator.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Build an online course with AI help."
+},
+{
+"h": "digitalartist.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "A home for digital artists."
+},
+{
+"h": "doomscroll.pro",
+"c": "Fun and games",
+"m": "plan",
+"p": "Points to doomscroll.monster."
+},
+{
+"h": "elevatinghumanity.world",
+"c": "Elevate humanity",
+"m": "plan",
+"p": "Points to elevatehumanity.life."
+},
+{
+"h": "eli5.college",
+"c": "Explain like I'm 5",
+"m": "plan",
+"p": "College subjects, explained like you're five."
+},
+{
+"h": "eli5.design",
+"c": "Explain like I'm 5",
+"m": "plan",
+"p": "Design ideas, explained like you're five."
+},
+{
+"h": "eli5.diy",
+"c": "Explain like I'm 5",
+"m": "plan",
+"p": "DIY projects, explained like you're five."
+},
+{
+"h": "eli5.fitness",
+"c": "Explain like I'm 5",
+"m": "plan",
+"p": "Fitness, explained like you're five."
+},
+{
+"h": "eli5.living",
+"c": "Explain like I'm 5",
+"m": "plan",
+"p": "Everyday living, explained like you're five."
+},
+{
+"h": "eli5.online",
+"c": "Explain like I'm 5",
+"m": "plan",
+"p": "Anything online, explained like you're five."
+},
+{
+"h": "eli5.pics",
+"c": "Explain like I'm 5",
+"m": "plan",
+"p": "Explained like you're five, with pictures."
+},
+{
+"h": "eli5.tips",
+"c": "Explain like I'm 5",
+"m": "plan",
+"p": "Quick tips, explained like you're five."
+},
+{
+"h": "eli5.website",
+"c": "Explain like I'm 5",
+"m": "plan",
+"p": "Websites, explained like you're five."
+},
+{
+"h": "excusemaker.pro",
+"c": "Fun and games",
+"m": "plan",
+"p": "Points to excusegenerator.pro."
+},
+{
+"h": "gentleai.pro",
+"c": "AI help for seniors and families",
+"m": "plan",
+"p": "Gentle AI help, pro version."
+},
+{
+"h": "humanity.baby",
+"c": "Humanity",
+"m": "plan",
+"p": "Humanity's newest members."
+},
+{
+"h": "humanity.beauty",
+"c": "Humanity",
+"m": "plan",
+"p": "The beauty in humanity."
+},
+{
+"h": "humanity.careers",
+"c": "Humanity",
+"m": "plan",
+"p": "Careers that help humanity."
+},
+{
+"h": "humanity.doctor",
+"c": "Humanity",
+"m": "plan",
+"p": "Health for all of humanity."
+},
+{
+"h": "humanity.gifts",
+"c": "Humanity",
+"m": "plan",
+"p": "Gifts that do good."
+},
+{
+"h": "humanity.support",
+"c": "Humanity",
+"m": "plan",
+"p": "Support for all of humanity."
+},
+{
+"h": "idealbody.pro",
+"c": "Body and movement",
+"m": "plan",
+"p": "Your ideal body, defined by you."
+},
+{
+"h": "landingpagepro.pro",
+"c": "Website building",
+"m": "plan",
+"p": "Landing pages that work."
+},
+{
+"h": "linkedinwriter.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Better LinkedIn posts."
+},
+{
+"h": "medicalcannabis.care",
+"c": "Everyday help",
+"m": "plan",
+"p": "Plain facts about medical cannabis, where legal."
+},
+{
+"h": "modeltrainer.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Learn to train AI models."
+},
+{
+"h": "newsletterwriter.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Better newsletters."
+},
+{
+"h": "pitchcoach.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Pitch coaching."
+},
+{
+"h": "posturecoach.pro",
+"c": "Body and movement",
+"m": "plan",
+"p": "Posture coaching."
+},
+{
+"h": "promptartist.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Prompt artistry."
+},
+{
+"h": "promptdesigner.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Prompt design."
+},
+{
+"h": "promptwhisperer.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Prompt whispering."
+},
+{
+"h": "promptwizard.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Prompt wizardry."
+},
+{
+"h": "remotecontrol.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "Remote work tips."
+},
+{
+"h": "screenaddict.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "For screen addicts."
+},
+{
+"h": "shortseditor.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Shorts editing."
+},
+{
+"h": "stretchcoach.pro",
+"c": "Body and movement",
+"m": "plan",
+"p": "Stretch coaching."
+},
+{
+"h": "techwhisperer.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Tech whispering."
+},
+{
+"h": "thefinalcountdown.live",
+"c": "Fun and games",
+"m": "plan",
+"p": "Points to thefinalcountdown.app."
+},
+{
+"h": "thumbnailartist.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Better thumbnails."
+},
+{
+"h": "timehacker.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "Time hacks."
+},
+{
+"h": "voiceactor.pro",
+"c": "Pros and personas",
+"m": "plan",
+"p": "Voice acting tips."
+},
+{
+"h": "workflowwizard.pro",
+"c": "AI agents and business",
+"m": "plan",
+"p": "Workflow wizardry."
+},
+{
+"h": "agentbank.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Banking built for AI agents: safe spending limits, receipts, and a human who approves every big move.",
+"u": "https://agentbank.ing/"
+},
+{
+"h": "aiclaims.tech",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Help people file insurance claims clearly and completely, the first time.",
+"u": "https://aiclaims.tech/"
+},
+{
+"h": "aiunderwriter.loan",
+"c": "Lending education",
+"m": "starter",
+"p": "An open look at automated underwriting: what it checks, where it can be unfair, and how to fix it. We do not offer loans.",
+"u": "https://aiunderwriter.loan/"
+},
+{
+"h": "certified.charity",
+"c": "Giving and trust",
+"m": "starter",
+"p": "Certified by us, which we admit does not count for much. It looks like a scam and it is not one. Donations open soon.",
+"u": "https://certified.charity/"
+},
+{
+"h": "holy.charity",
+"c": "Giving and trust",
+"m": "starter",
+"p": "Giving as a sacred act, in the spirit of the great traditions. Sincere and plain. Donations open soon.",
+"u": "https://holy.charity/"
+},
+{
+"h": "renegade.charity",
+"c": "Giving and trust",
+"m": "starter",
+"p": "Gifts here go toward a personal gift for the builder. We are telling you up front. Donations open soon.",
+"u": "https://renegade.charity/"
+},
+{
+"h": "virtuous.charity",
+"c": "Giving and trust",
+"m": "starter",
+"p": "Giving as a practice of good character, sincere and plain. Donations open soon.",
+"u": "https://virtuous.charity/"
+},
+{
+"h": "wonderful.charity",
+"c": "Giving and trust",
+"m": "starter",
+"p": "Wonderful acts of giving, and how to check that a charity is wonderful before you give.",
+"u": "https://wonderful.charity/"
+},
+{
+"h": "couchadvice.pro",
+"c": "Fun and games",
+"m": "plan",
+"p": "Points to couchadvice.com."
+},
+{
+"h": "couchadvice.xyz",
+"c": "Fun and games",
+"m": "plan",
+"p": "Points to couchadvice.com."
+},
+{
+"h": "elevatehumanity.uk",
+"c": "Elevate humanity",
+"m": "plan",
+"p": "Points to elevatehumanity.life."
+},
+{
+"h": "elevatehumanity.us",
+"c": "Elevate humanity",
+"m": "plan",
+"p": "Points to elevatehumanity.life."
+},
+{
+"h": "eli5.consulting",
+"c": "Explain like I'm 5",
+"m": "plan",
+"p": "Consulting jargon, explained like you're five."
+},
+{
+"h": "humanity.hair",
+"c": "Humanity",
+"m": "plan",
+"p": "Hair for all of humanity."
+},
+{
+"h": "aiapproved.loan",
+"c": "Lending education",
+"m": "starter",
+"p": "An honest guide to how AI is used in lending decisions, and what you can ask a lender. We do not offer loans.",
+"u": "https://aiapproved.loan/"
+},
+{
+"h": "ailoan.loan",
+"c": "Lending education",
+"m": "starter",
+"p": "Learn how AI reads a loan application and how to protect yourself. We do not offer loans.",
+"u": "https://ailoan.loan/"
+},
+{
+"h": "botlender.loan",
+"c": "Lending education",
+"m": "starter",
+"p": "A watchdog guide to robot lending: what to look out for, and your rights. We do not offer loans.",
+"u": "https://botlender.loan/"
+}
+]
+}
