@@ -208,7 +208,7 @@
 "h": "honorable.charity",
 "c": "Giving and trust",
 "m": "starter",
-"p": "A sincere home for honorable giving: give with care, and honor the people who do right by others. Donations open soon.",
+"p": "A sincere home for honorable giving: give with care, and honor the people who do right by others. Planned.",
 "s": 8.0,
 "u": "https://honorable.charity/"
 },
@@ -340,7 +340,7 @@
 "h": "notascam.charity",
 "c": "Giving and trust",
 "m": "starter",
-"p": "This is not a scam. We know that is exactly what a scam would say, and we say it anyway. Donations open soon.",
+"p": "This is not a scam. We know that is exactly what a scam would say, and we say it anyway. Planned.",
 "s": 7.0,
 "u": "https://notascam.charity/"
 },
@@ -434,7 +434,7 @@
 "h": "trustme.charity",
 "c": "Giving and trust",
 "m": "starter",
-"p": "Trust us. Yes, we know that is what a scam says too. It is still not a scam. Donations open soon.",
+"p": "Trust us. Yes, we know that is what a scam says too. It is still not a scam. Planned.",
 "s": 7.0,
 "u": "https://trustme.charity/"
 },
@@ -561,7 +561,7 @@
 "h": "corrupt.charity",
 "c": "Giving and trust",
 "m": "starter",
-"p": "We spend it however we want. At least we are honest about it. Donations open soon.",
+"p": "Satire: a charity that is honest about being dishonest. Planned.",
 "s": 7.0,
 "u": "https://corrupt.charity/"
 },
@@ -1731,7 +1731,7 @@
 "h": "definitelyreal.charity",
 "c": "Giving and trust",
 "m": "starter",
-"p": "Definitely real. Very real. The realest. We can tell this sounds like a scam, and it is not one. Donations open soon.",
+"p": "Definitely real. Very real. The realest. We can tell this sounds like a scam, and it is not one. Planned.",
 "u": "https://definitelyreal.charity/"
 },
 {
@@ -2151,7 +2151,7 @@
 "h": "totallylegit.charity",
 "c": "Giving and trust",
 "m": "starter",
-"p": "Totally legit. Completely, entirely, one hundred percent legit. Please do not look into it. Okay, you can look into it. Donations open soon.",
+"p": "Totally legit. Completely, entirely, one hundred percent legit. Please do not look into it. Okay, you can look into it. Planned.",
 "u": "https://totallylegit.charity/"
 },
 {
@@ -2576,28 +2576,28 @@
 "h": "certified.charity",
 "c": "Giving and trust",
 "m": "starter",
-"p": "Certified by us, which we admit does not count for much. It looks like a scam and it is not one. Donations open soon.",
+"p": "Certified by us, which we admit does not count for much. It looks like a scam and it is not one. Planned.",
 "u": "https://certified.charity/"
 },
 {
 "h": "holy.charity",
 "c": "Giving and trust",
 "m": "starter",
-"p": "Giving as a sacred act, in the spirit of the great traditions. Sincere and plain. Donations open soon.",
+"p": "Giving as a sacred act, in the spirit of the great traditions. Sincere and plain. Planned.",
 "u": "https://holy.charity/"
 },
 {
 "h": "renegade.charity",
 "c": "Giving and trust",
 "m": "starter",
-"p": "Gifts here go toward a personal gift for the builder. We are telling you up front. Donations open soon.",
+"p": "Satire: the charity that tells you up front it is all for itself. Planned.",
 "u": "https://renegade.charity/"
 },
 {
 "h": "virtuous.charity",
 "c": "Giving and trust",
 "m": "starter",
-"p": "Giving as a practice of good character, sincere and plain. Donations open soon.",
+"p": "Giving as a practice of good character, sincere and plain. Planned.",
 "u": "https://virtuous.charity/"
 },
 {

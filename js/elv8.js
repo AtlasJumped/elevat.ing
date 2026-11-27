@@ -232,7 +232,7 @@
     }
     more.addEventListener("click", function () { shown += 60; render(); });
     var x = new XMLHttpRequest();
-    x.open("GET", "data/sites.json?v=20261127b");
+    x.open("GET", "data/sites.json?v=20261127p2");
     x.onload = function () {
       var d; try { d = JSON.parse(x.responseText); } catch (e) { sum.textContent = "The list could not load. Refresh to try again."; return; }
       all = (d.sites || []).map(function (r, i) { r.n = i; return r; });
