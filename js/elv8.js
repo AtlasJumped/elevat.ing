@@ -24,17 +24,21 @@
 
   /* ---------- mic: live text as you talk ---------- */
   var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  var activeMic = null;
+  var MIC_TIP = "Press the microphone button and talk. You'll see the text in there. When you're done talking, you don't need to press anything. Just press the next microphone and start talking. If you want to skip a section, just skip to the next microphone.";
   function micFor(field, say) {
     if (!SR) return null;
     var on = false, rec = null, base = "";
     var b = el("button", { type: "button", "class": "mic", "aria-pressed": "false", "aria-label": "Start recording", text: "🎙" });
     b.addEventListener("click", function () {
       if (on) { try { rec.stop(); } catch (e) {} return; }
+      if (activeMic && activeMic !== b) activeMic.stop();
+      activeMic = b;
       try {
         rec = new SR(); rec.continuous = true; rec.interimResults = true; rec.lang = doc.documentElement.lang || "en-US";
         base = field.value ? field.value.replace(/\s*$/, " ") : "";
         rec.onresult = function (e) { var t = "", i; for (i = 0; i < e.results.length; i++) t += e.results[i][0].transcript; field.value = base + t; };
-        rec.onend = function () { on = false; b.setAttribute("aria-pressed", "false"); b.setAttribute("aria-label", "Start recording"); b.classList.remove("rec"); say("Paused. Edit the words if you like, then send."); };
+        rec.onend = function () { if (activeMic === b) activeMic = null; on = false; b.setAttribute("aria-pressed", "false"); b.setAttribute("aria-label", "Start recording"); b.classList.remove("rec"); say("Paused. Edit the words if you like, then send."); };
         rec.onerror = function (e) { say(e && e.error === "not-allowed" ? "Your browser blocked the microphone. Allow it for this site, or type instead." : "The mic stopped. You can type instead."); };
         rec.start(); on = true; b.setAttribute("aria-pressed", "true"); b.setAttribute("aria-label", "Stop recording"); b.classList.add("rec");
         say("Recording. You will see your words appear as you talk. If no words appear, the recording has not started.");
@@ -54,6 +58,7 @@
     function say(t) { out.textContent = t; }
     var mic = micFor(ta, say);
     box.appendChild(el("label", { "for": id + "-t", text: "Your voice on " + label.replace(/^[^:]+: /, "") }));
+    if (SR) box.appendChild(el("p", { "class": "tip", text: "Press the microphone button and talk. You'll see the text in the box. Paste a link or text too, if you like." }));
     box.appendChild(el("div", { "class": "row" }, [ta, mic]));
     var em = el("input", { type: "email", id: id + "-e", autocomplete: "email", placeholder: "Only if you want a reply" });
     box.appendChild(el("label", { "for": id + "-e", text: "Email (optional)" }));
@@ -125,7 +130,51 @@
     var STAGE = { family: "Main site", starter: "Starter page", plan: "Plan only" };
     var all = [], st = { q: "", cat: "", stage: "", sort: "cool" }, shown = 40;
     var more = doc.getElementById("showmore"), sum = doc.getElementById("sum");
-    var q = el("input", { type: "search", id: "sq", placeholder: "Search sites and plans", "aria-label": "Search sites and plans", autocomplete: "off" });
+    /* our own pages and cards, so the search covers everything on elevat.ing, not just the site list */
+    var PAGES = [
+      { t: "Ending world suffering", u: "end-suffering/", x: "Our plan to end world suffering: end starvation, poverty and homelessness. Cut waste, match what people no longer need to the places that need it, and move food fast. Waste is lost work." },
+      { t: "How we keep it secure", u: "security/", x: "Our vision for security: hardware switches, a chain of locked boxes, AI security agents that get stronger every month, logging in, and why nothing here asks for money." },
+      { t: "How communities are built", u: "communities/", x: "A map of the world where people say where they want to live, what they value, and what they would contribute. Start with a shared mission. Describe your ideal community." }
+    ];
+    [].forEach.call(doc.querySelectorAll("main [data-react], .afraid[data-react]"), function (c, i) {
+      var h = c.querySelector("h2, h3, .host, blockquote"); if (!h) return;
+      if (!c.id) c.id = "c-" + (c.getAttribute("data-react") || i);
+      var body = [].map.call(c.querySelectorAll("p, li"), function (n) { return n.textContent; }).join(" ");
+      PAGES.push({ t: h.textContent.trim(), u: "#" + c.id, x: body.replace(/\s+/g, " ").trim(), card: c });
+    });
+    var phits = el("div", { "class": "phits", "aria-live": "polite" });
+    sum.parentNode.insertBefore(phits, sum);
+    function pageHits() {
+      phits.textContent = "";
+      if (!st.q) return;
+      var words = st.q.split(" ").filter(function (w) { return w.length > 1 && !/^(an|the|and|or|of|to|on|in|dot|com|for)$/.test(w); });
+      if (!words.length) return;
+      var hits = PAGES.filter(function (pg) { var hay = (pg.t + " " + pg.x).toLowerCase(); return words.every(function (w) { return hay.indexOf(w) >= 0; }); });
+      if (!hits.length) return;
+      phits.appendChild(el("h3", { "class": "phits-h", text: "On elevat.ing (" + hits.length + ")" }));
+      var ul = el("ul");
+      hits.slice(0, 12).forEach(function (pg) {
+        var hay = pg.x, at = hay.toLowerCase().indexOf(words[0]), from = Math.max(0, at - 60);
+        var snip = (from ? "..." : "") + hay.slice(from, from + 170) + (from + 170 < hay.length ? "..." : "");
+        var a = el("a", { href: pg.u, text: pg.t });
+        if (pg.card) a.addEventListener("click", function () { var d = pg.card.querySelector("details"); if (d) d.open = true; });
+        ul.appendChild(el("li", {}, [a, el("span", { "class": "snip", text: snip })]));
+      });
+      phits.appendChild(ul);
+    }
+    /* can't find it? tell us, paste a link or text */
+    var missHost = el("div", { "class": "miss" });
+    var missBtn = el("button", { type: "button", "class": "voice-open", "aria-expanded": "false", text: "Can't find what you're looking for? Tell us" });
+    var missBox = null;
+    missBtn.addEventListener("click", function () {
+      if (missBox && !missBox.hidden) { missBox.hidden = true; missBtn.setAttribute("aria-expanded", "false"); return; }
+      if (!missBox) { missBox = voiceBox("search: something missing", "What were you looking for? Paste links or text, or press the mic and talk."); missHost.appendChild(missBox); missBtn.setAttribute("aria-controls", missBox.id); }
+      if (st.q && !missBox.querySelector("textarea").value) missBox.querySelector("textarea").value = "I searched for: " + q.value.trim() + "\n";
+      missBox.hidden = false; missBtn.setAttribute("aria-expanded", "true"); missBox.querySelector("textarea").focus();
+    });
+    missHost.insertBefore(missBtn, missHost.firstChild);
+    more.parentNode.parentNode.insertBefore(missHost, more.parentNode.nextSibling);
+    var q = el("input", { type: "search", id: "sq", placeholder: "Search everything on elevat.ing", "aria-label": "Search everything on elevat.ing", autocomplete: "off" });
     var go = el("button", { type: "button", "class": "btn primary", text: "Search" });
     var clr = el("button", { type: "button", "class": "btn", text: "Clear" });
     finder.appendChild(el("div", { "class": "q" }, [q, go, clr]));
@@ -169,6 +218,10 @@
     function render() {
       var rows = all.filter(pass);
       if (st.sort === "az") rows = rows.slice().sort(function (a, b) { return a.h < b.h ? -1 : 1; });
+      function endOf(h) { return h.slice(h.lastIndexOf(".")); }
+      if (st.sort === "end") rows = rows.slice().sort(function (a, b) { var x = endOf(a.h), y = endOf(b.h); return x < y ? -1 : x > y ? 1 : a.n - b.n; });
+      if (st.sort === "cat") rows = rows.slice().sort(function (a, b) { return a.c < b.c ? -1 : a.c > b.c ? 1 : a.n - b.n; });
+      pageHits();
       list.textContent = "";
       rows.slice(0, shown).forEach(function (r) { list.appendChild(row(r)); });
       if (!rows.length) list.appendChild(el("li", { text: st.q ? "No sites match “" + st.q + "”. Try one word, like grandma, dogs or ai, or press Clear." : "No sites match. Try fewer filters." }));
@@ -179,7 +232,7 @@
     }
     more.addEventListener("click", function () { shown += 60; render(); });
     var x = new XMLHttpRequest();
-    x.open("GET", "data/sites.json?v=20261127");
+    x.open("GET", "data/sites.json?v=20261127b");
     x.onload = function () {
       var d; try { d = JSON.parse(x.responseText); } catch (e) { sum.textContent = "The list could not load. Refresh to try again."; return; }
       all = (d.sites || []).map(function (r, i) { r.n = i; return r; });
@@ -188,7 +241,7 @@
       sels.push(pick("scat", "Category", "cat", [["", "All categories (" + all.length + ")"]].concat(cats.map(function (k) { return [k, k + " (" + cc[k] + ")"]; }))));
       var mc = {}; all.forEach(function (r) { mc[r.m] = (mc[r.m] || 0) + 1; });
       sels.push(pick("sstage", "Where it stands", "stage", [["", "Any stage"]].concat(["family", "starter", "plan"].filter(function (k) { return mc[k]; }).map(function (k) { return [k, STAGE[k] + " (" + mc[k] + ")"]; }))));
-      sels.push(pick("ssort", "Order", "sort", [["cool", "Coolest first"], ["az", "A to Z"]]));
+      sels.push(pick("ssort", "Order", "sort", [["cool", "Coolest first"], ["az", "A to Z"], ["end", "By domain ending"], ["cat", "By category"]]));
       render();
     };
     x.onerror = function () { sum.textContent = "The list could not load. Refresh to try again."; };
@@ -231,7 +284,8 @@
   }
   function infoStep(box, close, o) {
     box.appendChild(el("h2", { id: "fv-h", text: "Welcome. Happy Thanksgiving 2026." }));
-    box.appendChild(el("p", { text: "Tell us a little about yourself, if you like. Every box is optional. Press the mic and talk, or type." }));
+    box.appendChild(el("p", { text: "Tell us a little about yourself, if you like. Every box is optional." }));
+    box.appendChild(el("p", { "class": "tip", text: SR ? MIC_TIP : "Type in any box you like, and skip the rest." }));
     var vb = el("div", { "class": "vb" });
     var out = el("p", { "class": "out", role: "status", "aria-live": "polite" });
     function say(t) { out.textContent = t; }
@@ -283,28 +337,46 @@
     var glow = s("circle", { cx: 80, cy: 45, r: 20, fill: "none", stroke: "#ffcc33", "stroke-width": ".6", opacity: ".5" });
     var ht = s("text", { x: 80, y: 46.6, "text-anchor": "middle", "font-size": "4.4", "font-weight": "800", fill: "#1c1a2b" }); ht.textContent = "elevat.ing";
     hub.appendChild(glow); hub.appendChild(ring); hub.appendChild(ht); svg.appendChild(hub);
+    var KIND = ["ad", "pay", "login", "dup"];
     for (var i = 0; i < N; i++) {
-      var d = { x: 8 + rnd() * 144, y: 8 + rnd() * 70, ad: rnd() < 0.45 };
+      var r0 = rnd(), d = { x: 8 + rnd() * 144, y: 10 + rnd() * 62, kind: r0 < 0.18 ? "ad" : r0 < 0.32 ? "pay" : r0 < 0.47 ? "login" : r0 < 0.58 ? "dup" : "good" };
       var a = (i / N) * Math.PI * 2;
       d.hx = 80 + Math.cos(a) * (24 + (i % 3) * 5); d.hy = 45 + Math.sin(a) * (24 + (i % 3) * 5) * 0.85;
-      d.c = s("circle", { r: 2.2, cx: 0, cy: 0, "class": "dot", fill: "#8a85a8", style: "transform:translate(" + d.x + "px," + d.y + "px)" });
-      svg.appendChild(d.c); dots.push(d);
+      d.g = s("g", { "class": "dot", style: "transform:translate(" + d.x + "px," + d.y + "px)" });
+      d.c = s("circle", { r: 2.2, cx: 0, cy: 0, fill: "#8a85a8" });
+      d.t = s("text", { x: 0, y: -3.2, "text-anchor": "middle", "font-size": "3.4", fill: "#fff", style: "opacity:0" });
+      d.t.textContent = { ad: "AD", pay: "$", login: "🔒", dup: "×2", good: "" }[d.kind];
+      d.g.appendChild(d.c); d.g.appendChild(d.t);
+      svg.appendChild(d.g); dots.push(d);
     }
+    function tag(kinds, on) { dots.forEach(function (d) { if (kinds.indexOf(d.kind) >= 0) { d.t.style.opacity = on ? 1 : 0; if (on && d.kind === "ad") d.c.setAttribute("fill", "#e53935"); if (on && d.kind === "pay") d.c.setAttribute("fill", "#fb8c00"); } }); }
     var people = s("g", { style: "opacity:0;transition:opacity 1s" });
     for (var j = 0; j < 8; j++) {
       var ang = j / 8 * Math.PI * 2, px = 80 + Math.cos(ang) * 62, py = 45 + Math.sin(ang) * 38;
       people.appendChild(s("line", { x1: px, y1: py, x2: 80 + Math.cos(ang) * 16, y2: 45 + Math.sin(ang) * 14, stroke: "#7a5cf0", "stroke-width": ".5", "stroke-dasharray": "1.5 1.5" }));
-      var pe = s("text", { x: px, y: py + 1.6, "text-anchor": "middle", "font-size": "5" }); pe.textContent = j % 2 ? "🎙" : "🙂";
+      var pe = s("text", { x: px, y: py + 1.6, "text-anchor": "middle", "font-size": "5" }); pe.textContent = ["🎙", "🔗", "🙂", "📝"][j % 4];
       people.appendChild(pe);
     }
     svg.appendChild(people);
+    var search = s("g", { style: "opacity:0;transition:opacity 1s" });
+    search.appendChild(s("rect", { x: 46, y: 4, width: 68, height: 9, rx: 4.5, fill: "#ffffff", stroke: "#ffcc33", "stroke-width": ".6" }));
+    var stx = s("text", { x: 51, y: 10, "font-size": "4", fill: "#4a4760" }); stx.textContent = "🔍 Search only our content";
+    search.appendChild(stx); svg.appendChild(search);
+    var filt = s("g", { style: "opacity:0;transition:opacity 1s" });
+    filt.appendChild(s("circle", { cx: 80, cy: 45, r: 36, fill: "none", stroke: "#7a5cf0", "stroke-width": "1", "stroke-dasharray": "3 2" }));
+    [["values", 80, 7.5], ["math", 38, 76], ["science", 122, 76]].forEach(function (f) { var t = s("text", { x: f[1], y: f[2], "text-anchor": "middle", "font-size": "4.2", "font-weight": "800", fill: "#c2b2ff" }); t.textContent = f[0]; filt.appendChild(t); });
+    svg.appendChild(filt);
     var SC = [
-      ["Today, the best of the internet is scattered across millions of sites.", function () { dots.forEach(function (d) { d.c.setAttribute("fill", "#8a85a8"); d.c.style.opacity = 1; d.c.style.transform = "translate(" + d.x + "px," + d.y + "px)"; }); hub.style.opacity = 0; people.style.opacity = 0; }],
-      ["Much of it comes with ads, paywalls and noise.", function () { dots.forEach(function (d) { if (d.ad) d.c.setAttribute("fill", "#e53935"); }); }],
-      ["We take all of the best content, filtered by our values, and bring it together.", function () { dots.forEach(function (d) { if (d.ad) { d.c.style.opacity = 0.12; } else { d.c.setAttribute("fill", "#43a047"); d.c.style.transform = "translate(" + d.hx + "px," + d.hy + "px)"; } }); }],
-      ["One always free, ad-free hub of human innovation.", function () { hub.style.opacity = 1; dots.forEach(function (d) { if (!d.ad) d.c.setAttribute("fill", "#ffcc33"); }); }],
-      ["You talk back with the mic, and every site gets better. A new site every week.", function () { people.style.opacity = 1; }],
-      ["By 2036, a tamed internet. Humanity elevates.", function () { dots.forEach(function (d) { if (d.ad) { d.c.style.opacity = 0; } }); }]
+      ["Today, the internet is a bunch of websites: blogs, people sharing free things, and many sites all doing the same things.", function () { dots.forEach(function (d) { d.c.setAttribute("fill", "#8a85a8"); d.t.style.opacity = 0; d.g.style.opacity = 1; d.g.style.transform = "translate(" + d.x + "px," + d.y + "px)"; }); hub.style.opacity = 0; people.style.opacity = 0; search.style.opacity = 0; filt.style.opacity = 0; }],
+      ["Different places to log into, and different sites to navigate to, that are all doing the same things.", function () { tag(["login", "dup"], true); }],
+      ["Some sites still make you pay for what is offered free somewhere else, and many come with ads.", function () { tag(["pay", "ad"], true); }],
+      ["That model helped elevate humanity. To keep elevating, we need to upgrade our internet.", function () { }],
+      ["Our AI gathers all the best content and filters it into one place.", function () { dots.forEach(function (d) { d.t.style.opacity = 0; if (d.kind !== "good") { d.g.style.opacity = 0.1; } else { d.c.setAttribute("fill", "#43a047"); d.g.style.transform = "translate(" + d.hx + "px," + d.hy + "px)"; } }); }],
+      ["An internal elevating search bar searches only our own content, not the outside internet.", function () { search.style.opacity = 1; }],
+      ["On any page, press the mic: tell us what you like, fact-check us with sources, or paste links and text for anything missing.", function () { people.style.opacity = 1; }],
+      ["Our AI agents put every submission through a filter with a system of values, math, and science, and build it into the sites.", function () { filt.style.opacity = 1; }],
+      ["One always free, ad-free hub of human innovation. A new site every week.", function () { filt.style.opacity = 0; hub.style.opacity = 1; dots.forEach(function (d) { if (d.kind === "good") d.c.setAttribute("fill", "#ffcc33"); }); }],
+      ["By 2036, a tamed internet. Humanity elevates.", function () { dots.forEach(function (d) { if (d.kind !== "good") d.g.style.opacity = 0; }); }]
     ];
     var big = el("button", { type: "button", "class": "playbig", "aria-label": "Play the vision", text: "▶" });
     stage.appendChild(big);
@@ -315,11 +387,74 @@
     pl.appendChild(stage); pl.appendChild(ctl);
     var k = -1, timer = 0, playing = false;
     function show(n) { k = n; SC[n][1](); cap.textContent = SC[n][0]; bar.firstChild.style.width = ((n + 1) / SC.length * 100) + "%"; }
-    function step() { if (k >= SC.length - 1) { stop(true); return; } show(k + 1); timer = setTimeout(step, 3600); }
+    function step() { if (k >= SC.length - 1) { stop(true); return; } show(k + 1); timer = setTimeout(step, 4200); }
     function play() { if (k >= SC.length - 1 || k < 0) { k = -1; SC[0][1](); } big.hidden = true; playing = true; pb.textContent = "Pause"; step(); }
     function stop(end) { clearTimeout(timer); playing = false; pb.textContent = end ? "Replay" : "Play"; if (end) big.hidden = true; }
     big.addEventListener("click", play);
     pb.addEventListener("click", function () { if (playing) stop(false); else play(); });
     cap.textContent = "Our vision for the internet. Press play.";
+  }
+  /* ---------- human trials dialog (mental and physical health cards) ---------- */
+  var tm = doc.getElementById("trials");
+  if (tm) {
+    var tLast = null;
+    function tOpen(e) { tLast = e && e.currentTarget; tm.hidden = false; var c = tm.querySelector("[data-close]"); if (c) c.focus(); }
+    function tClose() { tm.hidden = true; if (tLast && tLast.focus) tLast.focus(); }
+    [].forEach.call(doc.querySelectorAll("[data-trials]"), function (b) { b.setAttribute("aria-haspopup", "dialog"); b.addEventListener("click", tOpen); });
+    [].forEach.call(tm.querySelectorAll("[data-close]"), function (b) { b.addEventListener("click", tClose); });
+    tm.addEventListener("click", function (e) { if (e.target === tm) tClose(); });
+    doc.addEventListener("keydown", function (e) {
+      if (tm.hidden) return;
+      if (e.key === "Escape") { tClose(); return; }
+      if (e.key === "Tab") {
+        var f = tm.querySelectorAll("button, a[href]"); if (!f.length) return;
+        if (e.shiftKey && doc.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
+        else if (!e.shiftKey && doc.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
+      }
+    });
+  }
+
+  /* ---------- a human who is half of a whole: the infinity picture ---------- */
+  var hg = doc.getElementById("hourglass");
+  if (hg) {
+    var NS2 = "http://www.w3.org/2000/svg";
+    function v(tag, a, txt) { var e = doc.createElementNS(NS2, tag), k2; for (k2 in a) e.setAttribute(k2, a[k2]); if (txt) e.textContent = txt; return e; }
+    var sv = v("svg", { viewBox: "0 0 200 116", role: "img", "aria-labelledby": "hg-t" });
+    sv.appendChild(v("title", { id: "hg-t" }, "An infinity sign. The left loop is you in society, in the physical world. The right loop is your digital world. Your AI sits where the loops cross."));
+    sv.appendChild(v("ellipse", { cx: 100, cy: 60, rx: 98, ry: 54, fill: "none", stroke: "currentColor", "stroke-width": ".5", "stroke-dasharray": "2 2", opacity: ".45" }));
+    sv.appendChild(v("text", { x: 100, y: 11, "text-anchor": "middle", "font-size": "5", "font-weight": "700", fill: "currentColor", opacity: ".7" }, "Society, in both worlds"));
+    var left = v("path", { d: "M100,62 C74,28 18,28 18,62 C18,96 74,96 100,62", fill: "rgba(255,204,51,.22)", stroke: "#ffb703", "stroke-width": "1.6" });
+    var rightG = v("g", { "class": "hg-right" });
+    rightG.appendChild(v("path", { d: "M100,62 C126,28 182,28 182,62 C182,96 126,96 100,62", fill: "rgba(122,92,240,.16)", stroke: "#7a5cf0", "stroke-width": "1.6" }));
+    sv.appendChild(left);
+    sv.appendChild(v("text", { x: 52, y: 44, "text-anchor": "middle", "font-size": "5.4", "font-weight": "800", fill: "currentColor" }, "You, in society"));
+    sv.appendChild(v("text", { x: 52, y: 51, "text-anchor": "middle", "font-size": "4.2", fill: "currentColor", opacity: ".75" }, "the physical world"));
+    sv.appendChild(v("text", { x: 52, y: 72, "text-anchor": "middle", "font-size": "11" }, "🧍"));
+    [[30, 64], [36, 80], [70, 80], [74, 66]].forEach(function (pp) { sv.appendChild(v("circle", { cx: pp[0], cy: pp[1], r: 2.4, fill: "#ffb703", opacity: ".8" })); });
+    rightG.appendChild(v("text", { x: 150, y: 41, "text-anchor": "middle", "font-size": "5.4", "font-weight": "800", fill: "currentColor" }, "Your digital world"));
+    [["Phone calls", 116, 54], ["Texts", 124, 70], ["Email", 136, 56], ["Work chat", 146, 76], ["Social media", 160, 60], ["Servers", 170, 72], ["A warehouse", 166, 86]].forEach(function (it) {
+      rightG.appendChild(v("circle", { cx: it[1], cy: it[2] - 1.4, r: 1.3, fill: "#7a5cf0" }));
+      rightG.appendChild(v("text", { x: it[1] + 2.4, y: it[2], "font-size": "4", fill: "currentColor" }, it[0]));
+    });
+    rightG.appendChild(v("text", { x: 150, y: 97, "text-anchor": "middle", "font-size": "3.8", fill: "currentColor", opacity: ".7" }, "closer to you  ←  →  farther away"));
+    sv.appendChild(rightG);
+    var link = v("g", { "class": "hg-link" });
+    link.appendChild(v("circle", { cx: 100, cy: 62, r: 7.5, fill: "#ffcc33", stroke: "#1c1a2b", "stroke-width": ".6" }));
+    link.appendChild(v("text", { x: 100, y: 63.8, "text-anchor": "middle", "font-size": "4.4", "font-weight": "800", fill: "#1c1a2b" }, "AI"));
+    sv.appendChild(link);
+    sv.appendChild(v("text", { x: 100, y: 76, "text-anchor": "middle", "font-size": "4", "font-weight": "700", fill: "currentColor" }, "the layer between"));
+    hg.appendChild(sv);
+    var hcap = el("p", { "class": "hg-cap", "aria-live": "polite" });
+    var hb = el("button", { type: "button", "class": "btn primary", "aria-pressed": "true", text: "Put your phone down" });
+    var connected = true;
+    function hset() {
+      hg.classList.toggle("off", !connected);
+      hb.textContent = connected ? "Put your phone down" : "Pick up your phone";
+      hb.setAttribute("aria-pressed", String(connected));
+      hcap.textContent = connected ? "Connected. You and your digital world form one whole, joined by your AI." : "Disconnected. You are half of a whole: cut off from your digital world, and from the people on the other side of their screens.";
+    }
+    hb.addEventListener("click", function () { connected = !connected; hset(); });
+    hg.appendChild(el("div", { "class": "hg-ctl" }, [hb, hcap]));
+    hset();
   }
 })();

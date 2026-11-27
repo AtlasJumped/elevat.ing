@@ -11,6 +11,78 @@
 "u": "https://claudebomb.com/"
 },
 {
+"h": "underthebed.monster",
+"c": "Fun and games",
+"m": "starter",
+"p": "Bedtime stories where the monster under the bed is your friend.",
+"s": 10.0,
+"u": "https://underthebed.monster/"
+},
+{
+"h": "fennsma.sh",
+"c": "Fun and games",
+"m": "starter",
+"p": "Smash things in a game made for joy and stress relief.",
+"s": 10.0,
+"u": "https://fennsma.sh/"
+},
+{
+"h": "delulu.monster",
+"c": "Fun and games",
+"m": "starter",
+"p": "Dream big on purpose, then turn the dream into one small real step today.",
+"s": 9.5,
+"u": "https://delulu.monster/"
+},
+{
+"h": "cosmicjoke.lol",
+"c": "Fun and games",
+"m": "starter",
+"p": "The funniest true facts about the universe.",
+"s": 9.5,
+"u": "https://cosmicjoke.lol/"
+},
+{
+"h": "overreact.ing",
+"c": "Fun and games",
+"m": "starter",
+"p": "Express your reaction, then laugh at it. Part of the Reaction App family.",
+"s": 9.5,
+"u": "https://overreact.ing/"
+},
+{
+"h": "dragonrid.ing",
+"c": "Fun and games",
+"m": "starter",
+"p": "An adventure game where you ride dragons across worlds.",
+"s": 9.5,
+"u": "https://dragonrid.ing/"
+},
+{
+"h": "doomscroll.monster",
+"c": "Fun and games",
+"m": "starter",
+"p": "Catch the doomscroll monster and trade endless scrolling for something that feels good.",
+"s": 9.0,
+"u": "https://doomscroll.monster/"
+},
+{
+"h": "cosmicru.sh",
+"c": "Fun and games",
+"m": "starter",
+"p": "A fast space game for one quick break.",
+"s": 9.0,
+"u": "https://cosmicru.sh/"
+},
+{
+"h": "createjoy.art",
+"c": "Fun and games",
+"m": "starter",
+"p": "Make something that brings joy, share it, and inspire someone else to make something too.",
+"u": "https://createjoy.art/",
+"s": 9.0
+},
+{
 "h": "grubbing.money",
 "c": "Fun and games",
 "m": "starter",
@@ -75,52 +147,12 @@
 "u": "https://funsies.fun/"
 },
 {
-"h": "underthebed.monster",
-"c": "Fun and games",
-"m": "starter",
-"p": "Bedtime stories where the monster under the bed is your friend.",
-"s": 9.0,
-"u": "https://underthebed.monster/"
-},
-{
-"h": "delulu.monster",
-"c": "Fun and games",
-"m": "starter",
-"p": "Dream big on purpose, then turn the dream into one small real step today.",
-"s": 9.0,
-"u": "https://delulu.monster/"
-},
-{
 "h": "discombobulat.ing",
 "c": "Fun and games",
 "m": "starter",
 "p": "Puzzles and illusions that scramble your brain, in a good way.",
 "s": 9.0,
 "u": "https://discombobulat.ing/"
-},
-{
-"h": "cosmicjoke.lol",
-"c": "Fun and games",
-"m": "starter",
-"p": "The funniest true facts about the universe.",
-"s": 9.0,
-"u": "https://cosmicjoke.lol/"
-},
-{
-"h": "overreact.ing",
-"c": "Fun and games",
-"m": "starter",
-"p": "Express your reaction, then laugh at it. Part of the Reaction App family.",
-"s": 9.0,
-"u": "https://overreact.ing/"
-},
-{
-"h": "dragonrid.ing",
-"c": "Fun and games",
-"m": "starter",
-"p": "An adventure game where you ride dragons across worlds.",
-"s": 8.5,
-"u": "https://dragonrid.ing/"
 },
 {
 "h": "eli5.wtf",
@@ -142,14 +174,6 @@
 "m": "plan",
 "p": "For every coder who said it worked on my machine.",
 "s": 8.5
-},
-{
-"h": "fennsma.sh",
-"c": "Fun and games",
-"m": "starter",
-"p": "Smash things in a game made for joy and stress relief.",
-"s": 8.5,
-"u": "https://fennsma.sh/"
 },
 {
 "h": "whatisreality.wtf",
@@ -205,14 +229,6 @@
 "u": "https://whatis67.wtf/"
 },
 {
-"h": "doomscroll.monster",
-"c": "Fun and games",
-"m": "starter",
-"p": "Catch the doomscroll monster and trade endless scrolling for something that feels good.",
-"s": 7.5,
-"u": "https://doomscroll.monster/"
-},
-{
 "h": "aiforecast.ing",
 "c": "AI agents and business",
 "m": "starter",
@@ -255,14 +271,6 @@
 "m": "plan",
 "p": "For pros at making things up: spot AI hallucinations and laugh at the best ones.",
 "s": 7.5
-},
-{
-"h": "cosmicru.sh",
-"c": "Fun and games",
-"m": "starter",
-"p": "A fast space game for one quick break.",
-"s": 7.5,
-"u": "https://cosmicru.sh/"
 },
 {
 "h": "grillsergeant.pro",
@@ -556,6 +564,78 @@
 "p": "We spend it however we want. At least we are honest about it. Donations open soon.",
 "s": 7.0,
 "u": "https://corrupt.charity/"
+},
+{
+"h": "aihir.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Fairer hiring with AI that explains every recommendation and checks itself for bias.",
+"s": 7.0,
+"u": "https://aihir.ing/"
+},
+{
+"h": "aiautomat.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Turn the boring, repeated parts of your work into automations you understand and control.",
+"u": "https://aiautomat.ing/",
+"s": 7.0
+},
+{
+"h": "aiplann.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Plans for projects, trips, and weeks that adjust when life happens.",
+"u": "https://aiplann.ing/",
+"s": 7.0
+},
+{
+"h": "aiintern.tech",
+"c": "AI agents and business",
+"m": "starter",
+"p": "An AI intern for small teams: research, drafts, and busywork, checked by a person.",
+"u": "https://aiintern.tech/",
+"s": 7.0
+},
+{
+"h": "aiphotoedit.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Edit photos by describing what you want, and keep the original safe.",
+"u": "https://aiphotoedit.ing/",
+"s": 7.0
+},
+{
+"h": "aiquot.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Quotes customers understand, sent the same day they ask.",
+"u": "https://aiquot.ing/",
+"s": 7.0
+},
+{
+"h": "aitranslat.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Translation with AI and a human check, for businesses that need to be understood everywhere.",
+"u": "https://aitranslat.ing/",
+"s": 7.0
+},
+{
+"h": "aivideoedit.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Cut, caption, and polish video by describing what you want.",
+"s": 7.0,
+"u": "https://aivideoedit.ing/"
+},
+{
+"h": "aivoiceact.ing",
+"c": "AI agents and business",
+"m": "starter",
+"p": "Voice acting with AI, built with consent and fair pay for the human voices behind it.",
+"u": "https://aivoiceact.ing/",
+"s": 7.0
 },
 {
 "h": "agentstaff.ing",
@@ -1026,28 +1106,12 @@
 "u": "https://agentmarket.ing/"
 },
 {
-"h": "aihir.ing",
-"c": "AI agents and business",
-"m": "starter",
-"p": "Fairer hiring with AI that explains every recommendation and checks itself for bias.",
-"s": 5.5,
-"u": "https://aihir.ing/"
-},
-{
 "h": "agentmonitor.ing",
 "c": "AI agents and business",
 "m": "starter",
 "p": "Watch what your AI agents do, catch mistakes early, and keep a clear record of every action.",
 "s": 5.5,
 "u": "https://agentmonitor.ing/"
-},
-{
-"h": "aivideoedit.ing",
-"c": "AI agents and business",
-"m": "starter",
-"p": "Cut, caption, and polish video by describing what you want.",
-"s": 5.5,
-"u": "https://aivideoedit.ing/"
 },
 {
 "h": "startupbuild.ing",
@@ -1196,13 +1260,6 @@
 "u": "https://agentbrew.beer/"
 },
 {
-"h": "aiautomat.ing",
-"c": "AI agents and business",
-"m": "starter",
-"p": "Turn the boring, repeated parts of your work into automations you understand and control.",
-"u": "https://aiautomat.ing/"
-},
-{
 "h": "aibrew.beer",
 "c": "Brewing",
 "m": "starter",
@@ -1257,13 +1314,6 @@
 "u": "https://aiillustrat.ing/"
 },
 {
-"h": "aiintern.tech",
-"c": "AI agents and business",
-"m": "starter",
-"p": "An AI intern for small teams: research, drafts, and busywork, checked by a person.",
-"u": "https://aiintern.tech/"
-},
-{
 "h": "aiinvoic.ing",
 "c": "AI agents and business",
 "m": "starter",
@@ -1288,13 +1338,6 @@
 "m": "starter",
 "p": "Property management help for small landlords: tenants, repairs, and rent in one calm place.",
 "u": "https://aipropertymanager.tech/"
-},
-{
-"h": "aitranslat.ing",
-"c": "AI agents and business",
-"m": "starter",
-"p": "Translation with AI and a human check, for businesses that need to be understood everywhere.",
-"u": "https://aitranslat.ing/"
 },
 {
 "h": "aiwithgrandma.help",
@@ -1572,13 +1615,6 @@
 "p": "Idea: a free, friendly daily chat."
 },
 {
-"h": "aiplann.ing",
-"c": "AI agents and business",
-"m": "starter",
-"p": "Plans for projects, trips, and weeks that adjust when life happens.",
-"u": "https://aiplann.ing/"
-},
-{
 "h": "aisalesrep.tech",
 "c": "AI agents and business",
 "m": "starter",
@@ -1598,13 +1634,6 @@
 "m": "starter",
 "p": "Understand your taxes in plain words before you file, and know what to ask a professional.",
 "u": "https://aitaxfil.ing/"
-},
-{
-"h": "aivoiceact.ing",
-"c": "AI agents and business",
-"m": "starter",
-"p": "Voice acting with AI, built with consent and fair pay for the human voices behind it.",
-"u": "https://aivoiceact.ing/"
 },
 {
 "h": "aiwithgrandpa.help",
@@ -1697,13 +1726,6 @@
 "m": "starter",
 "p": "Where craft brewing meets AI: recipe ideas, label art, and brewer stories.",
 "u": "https://craftai.beer/"
-},
-{
-"h": "createjoy.art",
-"c": "Fun and games",
-"m": "starter",
-"p": "Make something that brings joy, share it, and inspire someone else to make something too.",
-"u": "https://createjoy.art/"
 },
 {
 "h": "definitelyreal.charity",
@@ -1988,13 +2010,6 @@
 "u": "https://aiparalegal.tech/"
 },
 {
-"h": "aiphotoedit.ing",
-"c": "AI agents and business",
-"m": "starter",
-"p": "Edit photos by describing what you want, and keep the original safe.",
-"u": "https://aiphotoedit.ing/"
-},
-{
 "h": "aiplumber.tech",
 "c": "AI agents and business",
 "m": "starter",
@@ -2014,13 +2029,6 @@
 "m": "starter",
 "p": "Write winning proposals faster, with every claim backed by a source.",
 "u": "https://aiproposal.tech/"
-},
-{
-"h": "aiquot.ing",
-"c": "AI agents and business",
-"m": "starter",
-"p": "Quotes customers understand, sent the same day they ask.",
-"u": "https://aiquot.ing/"
 },
 {
 "h": "airoofer.tech",
