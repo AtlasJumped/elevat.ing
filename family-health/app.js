@@ -180,6 +180,30 @@
   }
 
   /* step 3: the sliders */
+  /* after someone finishes assessing another person: invite that person to assess themselves too (once per pair) */
+  function askSelf(r, s) {
+    S.asked = S.asked || {};
+    if (S.asked[k(r, s)] || $("#fh-self")) return;
+    S.asked[k(r, s)] = 1; save();
+    var back = document.activeElement;
+    var wrap = el("div", { "class": "modal", id: "fh-self" });
+    function close() { if (wrap.parentNode) wrap.parentNode.removeChild(wrap); document.removeEventListener("keydown", onKey, true); if (back && back.focus) try { back.focus(); } catch (e) { } }
+    function onKey(e) { if (e.key === "Escape") { e.stopPropagation(); close(); } }
+    var now = el("button", { type: "button", "class": "btn primary", text: s + " assesses themselves now", onclick: function () {
+      close(); S.rater = s; S.subject = s; save(); render(); var f = $("#fh-form"); if (f) { f.scrollIntoView(); var i = $("input", f); if (i) i.focus(); }
+    } });
+    var later = el("button", { type: "button", "class": "btn", text: "Later", onclick: close });
+    wrap.appendChild(el("div", { "class": "dlg", role: "dialog", "aria-modal": "true", "aria-labelledby": "fh-self-h" }, [
+      el("div", { "class": "dlg-top" }, [el("h2", { id: "fh-self-h", text: "Now ask " + s + " to assess themselves" })]),
+      el("p", { text: r + " has finished assessing " + s + ". Ask " + s + " to assess themselves too, on the same spectrums. Then the report shows where their own view and the family's view line up, and where they differ, so no one is singled out." }),
+      el("p", { text: "Hand them this device, or have them open this page on their own." }),
+      el("div", { "class": "actions" }, [now, later])
+    ]));
+    wrap.addEventListener("click", function (e) { if (e.target === wrap) close(); });
+    document.addEventListener("keydown", onKey, true);
+    document.body.appendChild(wrap);
+    now.focus();
+  }
   function stepForm() {
     var r = S.rater, s = S.subject, x = rec(r, s);
     var box = el("div", { "class": "step", id: "fh-form" }, [el("h3", { text: "3. " + r + " assessing " + (r === s ? "themselves" : s) })]);
@@ -187,8 +211,9 @@
     var prog = el("p", { "class": "progress", role: "status", "aria-live": "polite" });
     var note = el("p", { "class": "notice", role: "alert", hidden: "" , text: "Heads up: this option is meant to be used sparingly. For this tool to work, we suggest you leave fewer than three spectrums blank. You can keep going, and leave out as many as you want. The model just may not work as well." });
     box.appendChild(prog); box.appendChild(note);
-    function upd() {
+    function upd(first) {
       var st = stats(r, s);
+      if (!first && r !== s && st.filled === st.total && stats(s, s).filled < st.total) askSelf(r, s);
       prog.textContent = st.filled + " of " + st.total + " done" + (st.skip ? " (" + st.skip + " left out)" : "") + (st.filled === st.total ? ". Complete." : "");
       if (st.skip >= 3) note.removeAttribute("hidden"); else note.setAttribute("hidden", "");
       refresh();
@@ -197,7 +222,7 @@
       box.appendChild(el("h4", { "class": "group-h", text: g[0] }));
       g[1].forEach(function (t) { box.appendChild(traitRow(t, x, upd)); });
     });
-    upd();
+    upd(true);
     box.appendChild(el("p", {}, [el("a", { "class": "btn primary", href: "#fh-matrix", text: "See family progress" })]));
     return box;
   }
@@ -311,7 +336,7 @@
     var body = el("tbody");
     d.rows.forEach(function (x) {
       var tr = el("tr", {}, [el("th", { scope: "row", text: x.t[1] })]);
-      d.raters.forEach(function (r) { var v = x.per[r]; tr.appendChild(typeof v === "number" ? el("td", { "class": "z" + v, text: String(v) }) : el("td", { "class": "gap", text: v === "skip" ? "left out" : "–" })); });
+      d.raters.forEach(function (r) { var v = x.per[r]; tr.appendChild(typeof v === "number" ? el("td", { "class": "z" + v, text: String(v) }) : el("td", { "class": "gap", text: v === "skip" ? "left out" : "no answer" })); });
       var a = el("td", { "class": x.avg === null ? "gap" : "z" + zoneOf(x.avg), text: x.avg === null ? "blind spot" : x.avg.toFixed(1) });
       if (x.spread >= 2) a.appendChild(el("span", { "class": "flag", text: "seen very differently" }));
       if (x.selfGap !== null && Math.abs(x.selfGap) >= 2) a.appendChild(el("span", { "class": "flag", text: x.selfGap < 0 ? "self-view kinder than others'" : "self-view harsher than others'" }));

@@ -1,4 +1,4 @@
-/* HMR Universe: memory spectrum, ego tags, QR-style ID mock-ups, and a planet sketcher saved only in this browser. */
+/* The Universe story: memory spectrum, ego tags, QR-style ID mock-ups, and a planet sketcher saved only in this browser. */
 (function () {
   "use strict";
   var $ = function (s) { return document.querySelector(s); };
