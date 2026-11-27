@@ -46,7 +46,7 @@
 "h": "overreact.ing",
 "c": "Fun and games",
 "m": "starter",
-"p": "Express your reaction, then laugh at it. Part of the Reaction App family.",
+"p": "A video recording of yourself watching funny videos. Express your reaction, then laugh at it. Part of the Reaction App family.",
 "s": 9.5,
 "u": "https://overreact.ing/"
 },
@@ -54,7 +54,7 @@
 "h": "dragonrid.ing",
 "c": "Fun and games",
 "m": "starter",
-"p": "An adventure game where you ride dragons across worlds.",
+"p": "An adventure game where you ride dragons across the worlds of our story universe.",
 "s": 9.5,
 "u": "https://dragonrid.ing/"
 },
@@ -102,7 +102,7 @@
 "h": "ilovedogs.live",
 "c": "Dogs",
 "m": "starter",
-"p": "Live dog cams and happy dog moments.",
+"p": "We ask people to consider putting up the live feeds of their dogs. Make a little profile with your dogs' cameras and today's dog activity, and give a thumbs up to the ones you love. Other places have the cutest dog clips. This one is live and recent: a place to just watch dogs, playing and happy, today.",
 "s": 9.8,
 "u": "https://ilovedogs.live/"
 },
@@ -200,8 +200,8 @@
 {
 "h": "procrastinate.pro",
 "c": "Pros and personas",
-"m": "plan",
-"p": "For pro procrastinators. We'll finish this page later.",
+"m": "done",
+"p": "The plan for pro procrastinators. We'll finish this page later.",
 "s": 8.0
 },
 {
@@ -224,7 +224,7 @@
 "h": "whatis67.wtf",
 "c": "Fun and games",
 "m": "starter",
-"p": "The 67 meme explained for confused parents and teachers.",
+"p": "Two takes. One: the 67 meme explained for confused parents and teachers. Two: it doesn't mean anything, so we tell stories that don't mean anything, and point you to the podcasts that help people fall asleep by talking about nothing.",
 "s": 8.0,
 "u": "https://whatis67.wtf/"
 },
@@ -248,14 +248,14 @@
 "h": "dadjoke.pro",
 "c": "Pros and personas",
 "m": "plan",
-"p": "A dad joke a day.",
+"p": "A list of all the dad jokes in the world, with thumbs up and thumbs down, so the world can forever know what the best dad jokes are. A dad joke generator, a way to submit your own, and an option to email your dad.",
 "s": 7.5
 },
 {
 "h": "excusegenerator.pro",
 "c": "Fun and games",
 "m": "plan",
-"p": "A silly excuse generator.",
+"p": "Turn on the microphone, talk about your situation and what you want to accomplish, and we'll figure out an excuse for you. A silly excuse generator, and a serious one for when you actually need an excuse. Thumbs up, thumbs down, and contribute your own.",
 "s": 7.5
 },
 {

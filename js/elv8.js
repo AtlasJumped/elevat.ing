@@ -28,23 +28,32 @@
   var MIC_TIP = "Press the microphone button and talk. You'll see the text in there. When you're done talking, you don't need to press anything. Just press the next microphone and start talking. If you want to skip a section, just skip to the next microphone.";
   function micFor(field, say) {
     if (!SR) return null;
-    var on = false, rec = null, base = "";
-    var b = el("button", { type: "button", "class": "mic", "aria-pressed": "false", "aria-label": "Start recording", text: "🎙" });
-    b.addEventListener("click", function () {
-      if (on) { try { rec.stop(); } catch (e) {} return; }
-      if (activeMic && activeMic !== b) activeMic.stop();
+    var on = false, rec = null, base = "", after = null;
+    var b = el("button", { type: "button", "class": "mic", "aria-pressed": "false", "aria-label": "Start recording", title: "Talk instead of typing" });
+    b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></svg>';
+    function ended() {
+      if (activeMic === b) activeMic = null; on = false; b.setAttribute("aria-pressed", "false"); b.setAttribute("aria-label", "Start recording"); b.classList.remove("rec");
+      var f = after; after = null; if (f) f(); else say("Paused. Edit the words if you like.");
+    }
+    function start() {
       activeMic = b;
       try {
         rec = new SR(); rec.continuous = true; rec.interimResults = true; rec.lang = doc.documentElement.lang || "en-US";
         base = field.value ? field.value.replace(/\s*$/, " ") : "";
         rec.onresult = function (e) { var t = "", i; for (i = 0; i < e.results.length; i++) t += e.results[i][0].transcript; field.value = base + t; };
-        rec.onend = function () { if (activeMic === b) activeMic = null; on = false; b.setAttribute("aria-pressed", "false"); b.setAttribute("aria-label", "Start recording"); b.classList.remove("rec"); say("Paused. Edit the words if you like, then send."); };
-        rec.onerror = function (e) { say(e && e.error === "not-allowed" ? "Your browser blocked the microphone. Allow it for this site, or type instead." : "The mic stopped. You can type instead."); };
+        rec.onend = ended;
+        rec.onerror = function (e) { if (e && e.error === "aborted") return; say(e && e.error === "not-allowed" ? "Your browser blocked the microphone. Allow it for this site, or type instead." : "The mic stopped. You can type instead."); };
         rec.start(); on = true; b.setAttribute("aria-pressed", "true"); b.setAttribute("aria-label", "Stop recording"); b.classList.add("rec");
-        say("Recording. You will see your words appear as you talk. If no words appear, the recording has not started.");
-      } catch (e) { say("The mic could not start here. You can type instead."); }
+        say("Recording. Your words appear in the box as you talk.");
+      } catch (e) { on = false; if (activeMic === b) activeMic = null; say("The mic could not start here. You can type instead."); }
+    }
+    b.addEventListener("click", function () {
+      if (on) { try { rec.stop(); } catch (e) {} return; }
+      /* one mic at a time: the mic that was on is switched off first, and this one starts the moment it has stopped */
+      if (activeMic && activeMic !== b) { var prev = activeMic, went = false, go = function () { if (went) return; went = true; start(); }; prev.stop(go); setTimeout(go, 700); return; }
+      start();
     });
-    b.stop = function () { if (on) try { rec.stop(); } catch (e) {} };
+    b.stop = function (then) { if (on) { after = then || null; try { rec.abort ? rec.abort() : rec.stop(); } catch (e) { ended(); } } else if (then) then(); };
     return b;
   }
 
@@ -127,7 +136,7 @@
   /* ---------- every site, and the plan for each ---------- */
   var list = doc.getElementById("slist"), finder = doc.getElementById("finder");
   if (list && finder) {
-    var STAGE = { family: "Main site", starter: "Starter page", plan: "Plan only" };
+    var STAGE = { family: "Main site", done: "Completed", starter: "Starter page", plan: "Plan only" };
     var all = [], st = { q: "", cat: "", stage: "", sort: "cool" }, shown = 40;
     var more = doc.getElementById("showmore"), sum = doc.getElementById("sum");
     /* our own pages and cards, so the search covers everything on elevat.ing, not just the site list */
@@ -232,7 +241,7 @@
     }
     more.addEventListener("click", function () { shown += 60; render(); });
     var x = new XMLHttpRequest();
-    x.open("GET", "data/sites.json?v=20261127p2");
+    x.open("GET", "data/sites.json?v=20261127r2");
     x.onload = function () {
       var d; try { d = JSON.parse(x.responseText); } catch (e) { sum.textContent = "The list could not load. Refresh to try again."; return; }
       all = (d.sites || []).map(function (r, i) { r.n = i; return r; });
@@ -240,7 +249,7 @@
       var cats = Object.keys(cc).sort(function (a, b) { return cc[b] - cc[a] || (a < b ? -1 : 1); });
       sels.push(pick("scat", "Category", "cat", [["", "All categories (" + all.length + ")"]].concat(cats.map(function (k) { return [k, k + " (" + cc[k] + ")"]; }))));
       var mc = {}; all.forEach(function (r) { mc[r.m] = (mc[r.m] || 0) + 1; });
-      sels.push(pick("sstage", "Where it stands", "stage", [["", "Any stage"]].concat(["family", "starter", "plan"].filter(function (k) { return mc[k]; }).map(function (k) { return [k, STAGE[k] + " (" + mc[k] + ")"]; }))));
+      sels.push(pick("sstage", "Where it stands", "stage", [["", "Any stage"]].concat(["family", "done", "starter", "plan"].filter(function (k) { return mc[k]; }).map(function (k) { return [k, STAGE[k] + " (" + mc[k] + ")"]; }))));
       sels.push(pick("ssort", "Order", "sort", [["cool", "Coolest first"], ["az", "A to Z"], ["end", "By domain ending"], ["cat", "By category"]]));
       render();
     };
@@ -270,7 +279,7 @@
     var m = el("div", { "class": "mission" });
     m.appendChild(el("h2", { id: "fv-h", text: "Our mission" }));
     m.appendChild(el("p", { "class": "hook", text: "If you don't think one person can change the world, that's our mission." }));
-    m.appendChild(el("p", { text: "Everything in our system of elevating websites is the work of one person working with AI. We are not saying this to brag. We are saying it to show you the potential you have. If one person can solve this many problems, just imagine what you can do, and what happens when we all band together on the same vision." }));
+    m.appendChild(el("p", { text: "Everything in our system of elevating websites is the work of a very, very small team working with AI. We are not saying this to brag. We are saying it to show you the potential you have. If a very, very small team can solve this many problems, just imagine what you can do, and what happens when we all band together on the same vision." }));
     m.appendChild(el("p", { text: "Our goal is to elevate humanity, and to show everybody that a small team can make a big difference in the pursuit of truth and harmony." }));
     m.appendChild(el("p", { text: "The very first page you are going to see is our plans to do that for everybody, for free, forever. Then you will see our flagship free product, which helps anybody who has never used AI use it for the first time, for free." }));
     box.appendChild(m);
@@ -283,9 +292,8 @@
     later.focus();
   }
   function infoStep(box, close, o) {
-    box.appendChild(el("h2", { id: "fv-h", text: "Welcome. Happy Thanksgiving 2026." }));
-    box.appendChild(el("p", { text: "Tell us a little about yourself, if you like. Every box is optional." }));
-    box.appendChild(el("p", { "class": "tip", text: SR ? MIC_TIP : "Type in any box you like, and skip the rest." }));
+    box.appendChild(el("h2", { id: "fv-h", text: "Welcome." }));
+    box.appendChild(el("p", { text: SR ? "Every box is optional. Press the mic and talk or type." : "Every box is optional. Type in any box you like." }));
     var vb = el("div", { "class": "vb" });
     var out = el("p", { "class": "out", role: "status", "aria-live": "polite" });
     function say(t) { out.textContent = t; }
@@ -297,7 +305,7 @@
     vb.appendChild(el("label", { "for": "fv-w", text: "What brings you here?" }));
     vb.appendChild(el("div", { "class": "row" }, [w, micFor(w, say)]));
     vb.appendChild(el("label", { "for": "fv-e", text: "Email (optional)" }));
-    vb.appendChild(e);
+    vb.appendChild(el("div", { "class": "row" }, [e, micFor(e, say)]));
     vb.appendChild(out);
     box.appendChild(vb);
     var skip = el("button", { type: "button", "class": "btn", text: "Skip entering my information" });
@@ -375,7 +383,7 @@
       ["An internal elevating search bar searches only our own content, not the outside internet.", function () { search.style.opacity = 1; }],
       ["On any page, press the mic: tell us what you like, fact-check us with sources, or paste links and text for anything missing.", function () { people.style.opacity = 1; }],
       ["Our AI agents put every submission through a filter with a system of values, math, and science, and build it into the sites.", function () { filt.style.opacity = 1; }],
-      ["One always free, ad-free hub of human innovation. A new site every week.", function () { filt.style.opacity = 0; hub.style.opacity = 1; dots.forEach(function (d) { if (d.kind === "good") d.c.setAttribute("fill", "#ffcc33"); }); }],
+      ["One hub of human innovation. A new site every week.", function () { filt.style.opacity = 0; hub.style.opacity = 1; dots.forEach(function (d) { if (d.kind === "good") d.c.setAttribute("fill", "#ffcc33"); }); }],
       ["By 2036, a tamed internet. Humanity elevates.", function () { dots.forEach(function (d) { if (d.kind !== "good") d.g.style.opacity = 0; }); }]
     ];
     var big = el("button", { type: "button", "class": "playbig", "aria-label": "Play the vision", text: "▶" });
@@ -387,12 +395,13 @@
     pl.appendChild(stage); pl.appendChild(ctl);
     var k = -1, timer = 0, playing = false;
     function show(n) { k = n; SC[n][1](); cap.textContent = SC[n][0]; bar.firstChild.style.width = ((n + 1) / SC.length * 100) + "%"; }
-    function step() { if (k >= SC.length - 1) { stop(true); return; } show(k + 1); timer = setTimeout(step, 4200); }
-    function play() { if (k >= SC.length - 1 || k < 0) { k = -1; SC[0][1](); } big.hidden = true; playing = true; pb.textContent = "Pause"; step(); }
-    function stop(end) { clearTimeout(timer); playing = false; pb.textContent = end ? "Replay" : "Play"; if (end) big.hidden = true; }
-    big.addEventListener("click", play);
-    pb.addEventListener("click", function () { if (playing) stop(false); else play(); });
-    cap.textContent = "Our vision for the internet. Press play.";
+    /* step by step: nothing plays by itself, so there is time to read. "Next step" moves on. */
+    function label() { pb.textContent = k < 0 ? "Start" : k >= SC.length - 1 ? "Start over" : "Next step (" + (k + 2) + " of " + SC.length + ")"; }
+    function next() { big.hidden = true; if (k >= SC.length - 1) { k = -1; SC[0][1](); } show(k + 1); label(); }
+    big.addEventListener("click", next);
+    pb.addEventListener("click", next);
+    cap.textContent = "Our vision for the internet, one step at a time. Press Start.";
+    label();
   }
   /* ---------- human trials dialog (mental and physical health cards) ---------- */
   var tm = doc.getElementById("trials");
